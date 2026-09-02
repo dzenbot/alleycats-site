@@ -1191,11 +1191,12 @@ details div {
 }
 
 .original-header nav > a:not(.original-button) {
-  transition: opacity 0.28s ease;
+  transition: color 0.28s ease;
 }
 
-.original-header nav > a:not(.original-button):hover {
-  color: rgba(0, 0, 0, 0.58);
+.original-home .original-header nav > a:not(.original-button):hover,
+.replica-page .original-header nav > a:not(.original-button):hover {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .original-header nav > a:not(.original-button):hover::after,
