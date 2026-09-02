@@ -1055,6 +1055,7 @@ details div {
   left: 0;
   right: 0;
   background: #fff;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .original-social {
