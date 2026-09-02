@@ -1,0 +1,116 @@
+[
+  {
+    "question": "What are your check-in & check-out policies?",
+    "answer": [
+      "Alley Cats Hotel is open to incoming and departing guests by appointment only. Our appointment times are available every day, Monday to Sunday, during two time slots:",
+      "10:00AM to 1:30PM and 2:30PM-6:00PM",
+      "We require a set appointment time to ensure we will be completely available to give you and your fur baby the one-on-one attention needed during this process. We also like to ensure that we have enough time to install your camera app on your device.",
+      "Please note that, although operational, we are not open for check-ins or check-outs on any BC statutory holidays. We are also closed to the public during Christmas Days (Dec 24th & 25th) and New Year’s Days (Dec 31st & Jan 1st).",
+      "A penalty of 50% daily rate will be charged at check out in case of arriving on non operational hours. A full daily rate will be charged if departing, 1 or more days earlier, without notifying us with at least 2 days in advance."
+    ]
+  },
+  {
+    "question": "What are your cancellation & refund policies?",
+    "answer": [
+      "We understand that plans can change, and we are always happy to discuss any needed adjustments to your reservation. Please contact us as soon as possible if you need to cancel, reschedule, or shorten your stay.",
+      "A 50% deposit is required at the time of booking to secure your reservation.",
+      "More than 10 days before arrival: your deposit is refundable, minus a $50 cancellation fee. Between 10 and 5 days: the deposit is held as a credit, minus a $50 cancellation fee. Less than 5 days: up to $500 of the deposit will not be refunded or credited.",
+      "Credits do not expire, but you are responsible for reminding us to apply them to a future booking.",
+      "Shortening a reservation with less than 5 days notice may result in a full daily rate penalty. During peak season, more than one daily rate penalty may be charged at our discretion."
+    ]
+  },
+  {
+    "question": "Why do you charge per day?",
+    "answer": [
+      "The daily fee covers all services and amenities provided for your cat’s comfort and well-being, including feeding, cleaning, and any additional care they may require.",
+      "Per-day pricing also gives you flexibility in drop-off and pickup times without additional hourly charges."
+    ]
+  },
+  {
+    "question": "What vaccines and precedures are required for my cat(s)?",
+    "answer": [
+      "All cats over six months old must be spayed or neutered. We require vaccinations against FVRCP, FeLV, and Rabies for outdoor cats. Please provide immunization records before arrival, have your veterinarian email them, or upload them to your cat’s profile.",
+      "Cats over 10 years old are considered senior and are not required to update their vaccines, although we still require their previous records.",
+      "If you opt out of the FeLV vaccine, you must provide a blood test from a veterinary clinic confirming no infection within 7 days before check-in. Flea and tick prevention is strongly recommended."
+    ]
+  },
+  {
+    "question": "What does Alley Cats Hotel provide?",
+    "answer": [
+      "We provide a litter box with high-quality biodegradable pine pellet litter, cleaned several times daily. Grain litter is available for a small charge, or you may bring your own compostable litter.",
+      "Rooms include full-sized scratching posts, climbing walls, toys, ceramic dishes and feeding mats. You may bring your own accessories, but we cannot be responsible for loss or damage.",
+      "We also offer well-being and relaxation care packages listed on our Rates page."
+    ]
+  },
+  {
+    "question": "Can you administer medication?",
+    "answer": [
+      "Depending on your cat’s temperament and for a fee, we can administer prescribed oral medication including pills, capsules, liquids and puff medication. Medication or probiotics given through food incur no additional charge.",
+      "We are currently unable to provide injectable medication."
+    ]
+  },
+  {
+    "question": "Why do you require the FeLV vaccine?",
+    "answer": [
+      "Feline Leukemia Virus is an infectious disease transmitted through bodily fluids. To protect all guests, cats must be vaccinated against FeLV whether they live indoors or outdoors.",
+      "If you opt out of vaccination, you must provide a blood test from a veterinary clinic confirming no infection within 7 days before check-in."
+    ]
+  },
+  {
+    "question": "Is it possible to take a tour of your facility?",
+    "answer": [
+      "During peak season we do not offer tours because we focus on caring for our cat guests. Peak seasons run from early June to late August and from December 20th to January 3rd.",
+      "During low season, 15-minute tours are available Tuesday through Thursday between 2:30PM and 4:00PM, depending on availability. Email us with your preferred date and time, full name, and phone number."
+    ]
+  },
+  {
+    "question": "What do you do in case of emergencies?",
+    "answer": [
+      "We retain the right to seek advice and medical treatment when necessary, with associated costs being the client’s responsibility.",
+      "We will make every effort to consult your pet’s veterinarian and also have an on-call veterinarian available for emergencies."
+    ]
+  },
+  {
+    "question": "What items should I bring for my cat's stay?",
+    "answer": [
+      "All cats must arrive in a secure carrier with claws trimmed. Bring enough food for the stay plus a little extra, and consider bringing a familiar blanket or scented comfort item.",
+      "We provide litter boxes, litter, scratching posts, climbing walls, toys, ceramic dishes and feeding mats.",
+      "Corded devices such as feeders, fountains and cameras are not permitted. Battery-powered devices are accepted if they do not require internet access or special handling."
+    ]
+  },
+  {
+    "question": "How do the cameras work?",
+    "answer": [
+      "Each room has an HD camera with night vision and no audio. You can monitor your cat from an iOS or Android device with a reliable internet connection.",
+      "You will receive setup instructions at check-in. We recommend downloading the app before arrival from app.alleycatshotel.com.",
+      "Camera access is complimentary and intended for monitoring only. The software is provided by a third party and may not be compatible with every device."
+    ]
+  },
+  {
+    "question": "Do you offer any discounts?",
+    "answer": [
+      "We offer a 12% discount for long-term bookings of 30 days or more. This cannot be applied to a shorter booking that is later extended to 30 days or more.",
+      "We no longer offer an early departure discount."
+    ]
+  },
+  {
+    "question": "What forms of payment do you accept?",
+    "answer": [
+      "We accept credit cards, Apple Pay, Google Pay, debit and e-transfer. Interac e-transfers can be sent to contact@alleycatshotel.com with no password required.",
+      "We do not accept cash or cheques except for gratuities. Gratuities are suggested at checkout and 100% goes to our staff."
+    ]
+  },
+  {
+    "question": "Why do you ask for tips/gratuities?",
+    "answer": [
+      "Gratuities are suggested at checkout so guests can conveniently express their appreciation for the exceptional care and attention provided by our staff."
+    ]
+  },
+  {
+    "question": "What are your Privacy Policies?",
+    "answer": [
+      "We take your privacy seriously and maintain strict confidentiality standards. Your contact information is safe and will not be shared or sold to third parties.",
+      "To process reservations we require your name, address, phone number and email, along with your cat’s information and medical history. All information is kept confidential and secure."
+    ]
+  }
+]
