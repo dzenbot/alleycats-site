@@ -1,0 +1,350 @@
+.original-home {
+  font-family: Poppins, "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #000;
+}
+
+.original-home h1,
+.original-home h2,
+.original-home h3 {
+  font-family: AcuminReplica, Poppins, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.original-hero {
+  height: 1053px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.original-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.original-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 31, 37, 0.48);
+}
+
+.original-hero-copy {
+  position: absolute;
+  z-index: 2;
+  left: 6vw;
+  top: 180px;
+  width: 410px;
+}
+
+.original-hero-copy h1 {
+  font-size: 63px;
+  line-height: 1.23;
+  margin: 0 0 22px;
+}
+
+.original-hero-copy p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.original-rooms {
+  height: 1763px;
+  padding: 76px 6vw 80px;
+  text-align: center;
+}
+
+.original-rooms h2 {
+  font-size: 45px;
+  line-height: 1.3;
+  color: #0e4061;
+  margin: 0 0 42px;
+}
+
+.original-room-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8.25vw;
+  row-gap: 38px;
+}
+
+.original-room-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.original-room-copy {
+  height: 233px;
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.original-room-copy h3 {
+  font-size: 35px;
+  line-height: 1.35;
+  color: #0e4061;
+  margin: 0 0 16px;
+}
+
+.original-room-copy p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.original-room-grid img {
+  width: 100%;
+  height: 412px;
+  object-fit: cover;
+}
+
+.original-outline {
+  display: inline-block;
+  border: 2px solid #0e4061;
+  color: #0e4061;
+  padding: 12px 21px;
+  font-size: 15px;
+  line-height: 1.2;
+  margin-top: 68px;
+}
+
+.original-outline.light {
+  border-color: #fff;
+  color: #fff;
+  margin-top: 66px;
+}
+
+.original-reviews {
+  height: 962px;
+  background: #0e4061;
+  color: #fff;
+  text-align: center;
+  padding: 82px 6vw 65px;
+}
+
+.original-reviews h2 {
+  font-size: 45px;
+  line-height: 1.3;
+  margin: 0 0 27px;
+}
+
+.original-stars {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 77px;
+}
+
+.original-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11vw;
+  align-items: start;
+}
+
+.original-review-grid figure {
+  margin: 0;
+}
+
+.original-review-grid blockquote {
+  display: block;
+  font-family: Poppins, "DM Sans", sans-serif;
+  font-size: 24.7px;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0 0 25px;
+}
+
+.original-review-grid figcaption {
+  font-size: 17px;
+}
+
+.original-start {
+  min-height: 869px;
+  background: #faf6ec;
+  padding: 76px 6vw 70px;
+  text-align: center;
+}
+
+.original-start-inner {
+  width: min(748px, 100%);
+  margin: 0 auto;
+}
+
+.original-start h2 {
+  font-size: 45px;
+  line-height: 1.3;
+  color: #0e4061;
+  margin: 0 0 26px;
+}
+
+.original-start p,
+.original-start li {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.original-start ol {
+  text-align: left;
+  padding-left: 1.6rem;
+  margin: 22px 0;
+}
+
+.original-start li {
+  padding-left: 8px;
+  margin-bottom: 12px;
+}
+
+.original-start a:not(.original-button) {
+  text-decoration: underline;
+}
+
+.original-start .original-button {
+  margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+  .original-hero {
+    height: 780px;
+  }
+
+  .original-hero-copy {
+    left: 6vw;
+    top: 165px;
+    width: 88%;
+  }
+
+  .original-hero-copy h1 {
+    font-size: 48px;
+  }
+
+  .original-rooms {
+    height: auto;
+    padding-top: 65px;
+  }
+
+  .original-room-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .original-room-copy {
+    height: auto;
+    min-height: 190px;
+    padding: 0 4% 30px;
+  }
+
+  .original-room-grid img {
+    height: auto;
+    aspect-ratio: 1.24/1;
+    object-fit: cover;
+  }
+
+  .original-rooms .original-outline {
+    margin: 55px 0;
+  }
+
+  .original-reviews {
+    height: auto;
+    padding: 65px 8vw;
+  }
+
+  .original-review-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .original-review-grid blockquote {
+    font-size: 21px;
+  }
+
+  .original-stars {
+    margin-bottom: 55px;
+  }
+
+  .original-start {
+    padding: 65px 8vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .original-hero {
+    height: 1053px;
+  }
+
+  .original-hero-copy {
+    left: 6vw;
+    top: 180px;
+    width: 410px;
+  }
+
+  .original-hero-copy h1 {
+    font-size: 63px;
+  }
+
+  .original-rooms {
+    height: 1763px;
+    padding-top: 76px;
+  }
+
+  .original-room-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 38px 8.25vw;
+  }
+
+  .original-room-copy {
+    height: 233px;
+    min-height: 0;
+    padding: 0 8%;
+  }
+
+  .original-room-grid img {
+    height: 412px;
+    aspect-ratio: auto;
+  }
+
+  .original-rooms .original-outline {
+    margin-top: 68px;
+    margin-bottom: 0;
+  }
+
+  .original-reviews {
+    height: 962px;
+    padding: 82px 6vw 65px;
+  }
+
+  .original-review-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11vw;
+  }
+
+  .original-review-grid blockquote {
+    font-size: 24.7px;
+  }
+
+  .original-stars {
+    margin-bottom: 77px;
+  }
+
+  .original-start {
+    padding: 76px 6vw 70px;
+  }
+}
+
+.original-overlay {
+  background: rgba(40, 40, 35, 0.58);
+}
+
+.original-hero-copy h1 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}

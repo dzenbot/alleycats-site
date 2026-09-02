@@ -4,12 +4,14 @@ A lightweight, responsive rebuild using plain HTML, CSS and JavaScript. It has n
 
 ## Preview locally
 
-Open `index.html` directly, or run:
+Open `docs/index.html` directly, or run from the repository root:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then visit `http://localhost:8000/docs/`.
+
+The complete GitHub Pages site is contained in `docs/`. Configure the repository's Pages source to deploy from the `docs` folder on the publishing branch.
 
 Pages: Home, Rooms & Rates, FAQ, and About.

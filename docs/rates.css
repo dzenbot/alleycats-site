@@ -1,0 +1,294 @@
+.rate-list > .eyebrow.upper {
+  margin-top: 8rem;
+}
+
+.rate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 2rem;
+}
+
+.rate-grid article img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.rate-grid h2 {
+  font-size: 2rem;
+}
+
+.rate-grid strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.rate-grid strong small {
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.rate-grid article > span {
+  font-size: 0.75rem;
+  color: #657780;
+}
+
+@media (max-width: 800px) {
+  .rate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rates-intro {
+  height: 273px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15vw;
+}
+
+.rates-intro h3 {
+  font-size: 35px;
+  line-height: 1.35;
+  color: #0e4061;
+  margin: 0;
+}
+
+.floor-title {
+  height: 130px;
+  background: #faf6ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floor-title.upper {
+  height: 95px;
+}
+
+.floor-title h2 {
+  font-size: 45px;
+  color: #0e4061;
+  margin: 0;
+}
+
+.rate-row {
+  min-height: 603px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 55px 6vw;
+  gap: 8vw;
+}
+
+.rate-row.cream {
+  background: #faf6ec;
+}
+
+.rate-row.white {
+  background: #fff;
+}
+
+.rate-row.reverse img {
+  order: 2;
+}
+
+.rate-row img {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+}
+
+.rate-copy h3 {
+  font-size: 35px;
+  color: #0e4061;
+  margin: 0 0 18px;
+}
+
+.rate-price {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.rate-copy p {
+  margin-bottom: 22px;
+}
+
+.rate-copy .original-button {
+  margin-top: 5px;
+}
+
+.services-replica {
+  min-height: 1512px;
+  background: #fff;
+  padding: 82px 6vw;
+}
+
+.services-replica > h2 {
+  text-align: center;
+  font-size: 45px;
+  color: #0e4061;
+  margin: 0 0 15px;
+}
+
+.services-replica > .services-lead {
+  text-align: center;
+  margin: 0 auto 60px;
+}
+
+.service-replica-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 6vw;
+}
+
+.service-replica-grid article {
+  text-align: center;
+}
+
+.service-replica-grid img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.service-replica-grid h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  color: #0e4061;
+  margin: 0 0 16px;
+}
+
+.service-replica-grid p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.services-note {
+  max-width: 850px;
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+.replica-start {
+  min-height: 869px;
+  background: #faf6ec;
+  padding: 76px 6vw 70px;
+  text-align: center;
+}
+
+.replica-start-inner {
+  max-width: 748px;
+  margin: auto;
+}
+
+.replica-start h2 {
+  font-size: 45px;
+  color: #0e4061;
+}
+
+.replica-start ol {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .rates-intro {
+    height: auto;
+    padding: 60px 8vw;
+  }
+
+  .rates-intro h3 {
+    font-size: 28px;
+  }
+
+  .floor-title {
+    height: 110px;
+  }
+
+  .rate-row {
+    grid-template-columns: 1fr;
+    padding: 55px 8vw;
+    gap: 35px;
+  }
+
+  .rate-row.reverse img {
+    order: 0;
+  }
+
+  .rate-row img {
+    height: auto;
+  }
+
+  .services-replica {
+    padding: 65px 8vw;
+  }
+
+  .service-replica-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rates hero title. */
+.rates-replica-hero .replica-hero-copy {
+  width: min(520px, 88%);
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+.rates-replica-hero h1 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.rates-replica-hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .rates-replica-hero .replica-hero-copy {
+    width: 84%;
+    margin: 85px auto 0;
+  }
+
+  .rates-replica-hero h1 {
+    font-size: 42px;
+  }
+}
+
+/* Rates room-feature introduction. */
+.rates-intro {
+  height: auto;
+  min-height: 360px;
+  padding: 90px 8vw;
+}
+
+.rates-intro h3 {
+  max-width: 940px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 767px) {
+  .rates-intro {
+    min-height: 0;
+    padding: 80px 8vw;
+  }
+
+  .rates-intro h3 {
+    font-size: 23px;
+    line-height: 1.55;
+  }
+}
