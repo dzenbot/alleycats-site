@@ -841,13 +841,15 @@ details div {
   transition:
     background-color 0.28s ease,
     border-color 0.28s ease,
-    color 0.28s ease;
+    color 0.28s ease,
+    scale 0.28s ease;
 }
 
 .original-button:hover {
   background: #fff;
   border-color: #0e4061;
   color: #0e4061 !important;
+  scale: 1.025;
 }
 
 .original-footer {
@@ -1109,12 +1111,14 @@ details div {
   font-weight: 200;
 }
 
-.original-home a:not(.original-button):not(.original-outline),
+.original-home
+  a:not(.original-button):not(.original-outline):not(.original-room-card),
 .replica-page a:not(.original-button) {
   transition: color 0.28s ease;
 }
 
-.original-home a:not(.original-button):not(.original-outline):hover,
+.original-home
+  a:not(.original-button):not(.original-outline):not(.original-room-card):hover,
 .replica-page a:not(.original-button):hover {
   color: #fdbd12;
 }
@@ -1205,11 +1209,26 @@ details div {
 }
 
 .original-logo img {
-  transition: opacity 0.28s ease;
+  transition:
+    opacity 0.28s ease,
+    scale 0.28s ease;
 }
 
 .original-logo:hover img {
   opacity: 0.58;
+  scale: 1.025;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .original-button,
+  .original-logo img {
+    transition: none;
+  }
+
+  .original-button:hover,
+  .original-logo:hover img {
+    scale: 1;
+  }
 }
 
 p.hero-description {

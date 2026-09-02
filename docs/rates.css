@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: auto;
+}
+
 .rate-list > .eyebrow.upper {
   margin-top: 8rem;
 }
@@ -85,6 +89,7 @@
   align-items: center;
   padding: 55px 6vw;
   gap: 8vw;
+  scroll-margin-top: 113px;
 }
 
 .rate-row.cream {

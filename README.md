@@ -1,3 +1,3 @@
-# Alley Cats Hotel static site
+# Alley Cats Hotel's static website
 
-A lightweight, responsive rebuild using plain HTML, CSS and JavaScript. It has no build step and is ready for GitHub Pages.
+A lightweight, responsive, using plain HTML, CSS and JavaScript.
