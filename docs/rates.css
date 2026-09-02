@@ -54,7 +54,7 @@ html {
 .floor-heading {
   margin: 0 0 42px;
   color: var(--navy);
-  font-family: AcuminReplica, Poppins, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 30px;
   font-weight: 500;
   line-height: 1.25;
@@ -379,53 +379,173 @@ html {
 
 .services-replica {
   min-height: 0;
-  padding: var(--section-space) 6vw;
-  background: #fff;
+  padding: var(--section-space) clamp(28px, 6vw, 112px);
+  background: #faf6ec;
+  scroll-margin-top: 113px;
 }
 .services-replica > h2 {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
   color: var(--navy);
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
   text-align: center;
 }
+.services-replica > h2::after {
+  display: block;
+  width: 130px;
+  height: 20px;
+  margin: 13px auto 0;
+  background:
+    linear-gradient(var(--navy), var(--navy)) left center / 48px 1px no-repeat,
+    linear-gradient(var(--navy), var(--navy)) right center / 48px 1px no-repeat;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  content: "✦";
+}
 .services-replica > .services-lead {
-  margin: 0 auto 60px;
+  max-width: none;
+  margin: 0 auto 52px;
+  color: #506873;
+  font-size: 16px;
+  line-height: 1.65;
   text-align: center;
+  white-space: nowrap;
 }
 .service-replica-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px 6vw;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
 }
 .service-replica-grid article {
-  text-align: center;
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  padding: 26px 24px;
+  border: 1px solid rgba(14, 64, 97, 0.12);
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(30, 42, 49, 0.045);
+  text-align: left;
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease;
 }
-.service-replica-grid img {
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 20px;
+.service-replica-grid article:hover {
+  border-color: rgba(14, 64, 97, 0.28);
+  box-shadow: 0 12px 28px rgba(30, 42, 49, 0.075);
+}
+.service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.service-icon {
+  display: grid;
+  width: clamp(56px, 4vw, 66px);
+  height: clamp(56px, 4vw, 66px);
+  flex: 0 0 clamp(56px, 4vw, 66px);
+  place-items: center;
+}
+.service-icon img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
-.service-replica-grid h3 {
-  margin: 0 0 16px;
+.service-card-header strong {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
   color: var(--navy);
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(26px, 2vw, 30px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+.service-card-header small {
+  flex: 0 0 auto;
+  color: #657780;
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.service-replica-grid h3 {
+  margin: 0 0 13px;
+  color: var(--navy);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 .service-replica-grid p {
+  margin: 0;
+  color: #50636d;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 .services-note {
-  max-width: 850px;
-  margin: 70px auto 0;
+  max-width: 900px;
+  margin: 58px auto 0;
+  color: #52656f;
   text-align: center;
+}
+.services-booking-note {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.services-disclaimer {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin: 0;
+  padding: 19px 22px;
+  border-left: 2px solid var(--navy);
+  background: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: left;
+}
+.services-disclaimer strong {
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 1500px) {
+  .service-replica-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 @media (max-width: 1050px) {
   .rate-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 68px 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .service-replica-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-replica > .services-lead {
+    max-width: 560px;
+    white-space: normal;
   }
 }
 
@@ -483,6 +603,10 @@ html {
   }
   .services-replica {
     padding: var(--section-space-mobile) 8vw;
+  }
+  .services-disclaimer {
+    flex-direction: column;
+    gap: 7px;
   }
 }
 

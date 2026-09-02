@@ -787,13 +787,6 @@ details div {
   }
 }
 
-@font-face {
-  font-family: AcuminReplica;
-  src: url("https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/abb8d202-34bc-4174-a25f-c00d4154bb44/latin.woff2")
-    format("woff2");
-  font-display: swap;
-}
-
 .original-header {
   position: absolute;
   z-index: 10;
@@ -862,7 +855,7 @@ details div {
   font-family: Poppins, "DM Sans", sans-serif;
   font-size: 17px;
   line-height: 1.8;
-  color: #000;
+  color: var(--navy);
 }
 
 .original-footer h3 {
@@ -954,7 +947,7 @@ details div {
 .replica-page h1,
 .replica-page h2,
 .replica-page h3 {
-  font-family: AcuminReplica, Poppins, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0;
 }
