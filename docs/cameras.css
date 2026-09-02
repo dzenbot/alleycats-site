@@ -1,0 +1,114 @@
+.camera-main {
+  min-height: 920px;
+  padding: 245px 6vw 100px;
+  background: #faf6ec;
+}
+
+.camera-guide {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.camera-guide h1 {
+  margin: 0 0 85px;
+  color: #0e4061;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 63px;
+  font-weight: 300;
+  line-height: 1.23;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.camera-guide > p {
+  margin-bottom: 32px;
+}
+.camera-guide ol {
+  margin: 0 0 42px;
+  padding-left: 1.6rem;
+}
+.camera-guide li {
+  margin-bottom: 14px;
+  padding-left: 8px;
+}
+.camera-guide a {
+  text-decoration: underline;
+}
+
+.camera-room-picker {
+  margin: 50px 0;
+  padding: 34px 38px;
+  background: #fff;
+}
+
+.camera-room-picker label {
+  display: block;
+  margin-bottom: 12px;
+  color: #0e4061;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.camera-room-picker select {
+  width: min(390px, 100%);
+  min-height: 50px;
+  padding: 10px 42px 10px 15px;
+  border: 1px solid #cfd3d4;
+  border-radius: 0;
+  background: #fff;
+  color: #000;
+  font: inherit;
+}
+
+.camera-room-picker select:focus-visible {
+  outline: 2px solid #0e4061;
+  outline-offset: 3px;
+}
+.camera-credentials {
+  margin-top: 26px;
+  line-height: 1.55;
+}
+.camera-credentials p {
+  margin: 0 0 7px;
+}
+.camera-credentials strong {
+  font-weight: 400;
+}
+
+.camera-guide h2 {
+  margin: 70px 0 35px;
+  color: #0e4061;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .camera-main {
+    padding: 180px 8vw 75px;
+  }
+  .camera-guide h1 {
+    margin-bottom: 55px;
+    font-size: 45px;
+  }
+  .camera-room-picker {
+    padding: 28px 24px;
+  }
+  .camera-guide h2 {
+    margin: 55px 0 30px;
+    font-size: 28px;
+  }
+}
+
+/* Consistent spacing at the final background transition. */
+.camera-main {
+  min-height: 0;
+  padding-bottom: var(--section-space);
+}
+
+@media (max-width: 767px) {
+  .camera-main {
+    padding-bottom: var(--section-space-mobile);
+  }
+}

@@ -211,7 +211,8 @@
 }
 
 .faq-page > .original-button:hover {
-  background: transparent;
+  background: #0e4061;
+  border-color: #fff;
   color: #fff !important;
 }
 

@@ -154,3 +154,20 @@
     margin-bottom: 30px;
   }
 }
+
+/* Consistent spacing between content sections. */
+.about-mission,
+.join-replica {
+  height: auto;
+  min-height: 0;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+@media (max-width: 767px) {
+  .about-mission,
+  .join-replica {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+}

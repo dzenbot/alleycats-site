@@ -126,7 +126,6 @@
 }
 
 .services-replica {
-  min-height: 1512px;
   background: #fff;
   padding: 82px 6vw;
 }
@@ -290,5 +289,23 @@
   .rates-intro h3 {
     font-size: 23px;
     line-height: 1.55;
+  }
+}
+
+/* Consistent spacing between content sections. */
+.rates-intro,
+.services-replica,
+.replica-start {
+  min-height: 0;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+@media (max-width: 767px) {
+  .rates-intro,
+  .services-replica,
+  .replica-start {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
   }
 }

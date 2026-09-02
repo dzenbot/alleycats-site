@@ -109,18 +109,37 @@
 
 .original-outline {
   display: inline-block;
-  border: 2px solid #0e4061;
+  border: 1px solid #0e4061;
+  border-radius: 0;
+  background: #fff;
   color: #0e4061;
   padding: 12px 21px;
   font-size: 15px;
   line-height: 1.2;
   margin-top: 68px;
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease;
+}
+
+.original-outline:hover {
+  background: #0e4061;
+  border-color: #fff;
+  color: #fff;
 }
 
 .original-outline.light {
   border-color: #fff;
-  color: #fff;
+  background: #fff;
+  color: #0e4061;
   margin-top: 66px;
+}
+
+.original-outline.light:hover {
+  border-color: #fff;
+  background: #0e4061;
+  color: #fff;
 }
 
 .original-reviews {
@@ -347,4 +366,102 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: -0.02em;
+}
+
+/* Consistent spacing between content sections. */
+.original-rooms {
+  height: auto;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+.original-reviews {
+  height: auto;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+.original-start {
+  min-height: 0;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+@media (max-width: 767px) {
+  .original-rooms,
+  .original-reviews,
+  .original-start {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+}
+
+/* Get Started step-by-step flow. */
+.original-start-inner {
+  width: min(920px, 100%);
+}
+
+.original-start ol {
+  counter-reset: booking-step;
+  list-style: none;
+  margin: 42px 0 36px;
+  padding: 0;
+  border-top: 1px solid rgba(14, 64, 97, 0.2);
+}
+
+.original-start li {
+  counter-increment: booking-step;
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin: 0;
+  padding: 22px 4px;
+  border-bottom: 1px solid rgba(14, 64, 97, 0.2);
+  text-align: left;
+}
+
+.original-start li::before {
+  content: counter(booking-step, decimal-leading-zero);
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #0e4061;
+  color: #0e4061;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .original-start li:first-child span {
+    white-space: nowrap;
+  }
+}
+
+.original-start .original-button {
+  margin-top: 34px;
+}
+
+@media (max-width: 767px) {
+  .original-start ol {
+    margin-top: 34px;
+  }
+
+  .original-start li {
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .original-start li::before {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .original-start .original-button {
+    margin-top: 30px;
+  }
 }

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Camera setup instructions for Alley Cats Hotel guests"
+    />
+    <title>Cameras — Alley Cats Hotel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cameras.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="replica-page cameras-page">
+    <header class="original-header">
+      <a href="index.html" class="original-logo"
+        ><img src="images/logo.png" alt="Alley Cats Hotel"
+      /></a>
+      <button class="menu" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <nav>
+        <a href="rates.html">Rates</a><a href="faq.html">FAQ</a
+        ><a href="about.html">About</a>
+        <a class="original-button" href="https://book.alleycatshotel.com"
+          >Book Now</a
+        >
+      </nav>
+    </header>
+
+    <main class="camera-main">
+      <section class="camera-guide">
+        <h1>Camera Setup Instructions</h1>
+        <p>
+          To set up Hik-Connect, a third-party camera app, on your phone/tablet
+          (iOS or Android), please follow these simple steps:
+        </p>
+        <ol>
+          <li>
+            Before proceeding, if you already have the
+            <strong>Hik-Connect</strong> app installed and configured, please
+            delete the previous configuration or uninstall the app.
+          </li>
+          <li>
+            Download and install the free app by visiting
+            <a href="https://app.alleycatshotel.com/">app.alleycatshotel.com</a>
+            or
+            <a href="https://appstore.hikvision.com/0yGe"
+              >appstore.hikvision.com/0yGe</a
+            >. If your cell network is slow, try our open Wi-Fi
+            <strong>AlleyCat-Guest</strong> (no password needed).
+          </li>
+          <li>
+            Open the app. You don’t need to allow permission for location,
+            notifications, or alerts.
+          </li>
+          <li>Scroll horizontally and press <strong>Start Now</strong>.</li>
+          <li>
+            Press Agree for the <strong>Privacy Policy</strong> and
+            <strong>Terms of Service</strong>.
+          </li>
+          <li>
+            Under Region, select Canada and press <strong>OK</strong>, or skip
+            entirely.
+          </li>
+          <li>
+            Press the <strong>“+”</strong> icon in the top-right corner and
+            choose <strong>Manual Adding</strong> → <strong>IP/Domain</strong>.
+          </li>
+        </ol>
+
+        <div class="camera-room-picker">
+          <label for="camera-room">Camera Credentials</label>
+          <select id="camera-room">
+            <option value="">Choose your room</option>
+          </select>
+          <div
+            id="camera-credentials"
+            class="camera-credentials"
+            aria-live="polite"
+          >
+            <p>Select your room to display its camera details.</p>
+          </div>
+        </div>
+
+        <ol start="8">
+          <li>
+            Press the <strong>Save</strong> icon in the top-right of the screen.
+          </li>
+          <li>Finally, press <strong>Start Live View</strong>.</li>
+          <li>
+            From the list of thumbnails, find and press the thumbnail for your
+            room.
+          </li>
+        </ol>
+        <h2>Enjoy watching your cat(s)!</h2>
+      </section>
+    </main>
+
+    <footer class="original-footer">
+      <div>
+        <h3>Location</h3>
+        <a href="https://maps.app.goo.gl/HDhQfXdjt5mjZy7t5" target="_blank" rel="noopener noreferrer"
+          >19822 McNeil Road<br />Pitt Meadows, BC V3Y 2T9</a
+        >
+      </div>
+      <div>
+        <h3>Public Hours</h3>
+        <p>Monday to Sunday<br />10:00 AM - 6:00 PM</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:contact@alleycatshotel.com"
+          >contact@alleycatshotel.com</a
+        ><a href="tel:+16044572287">(604) 457-2287</a>
+      </div>
+      <p class="original-copyright"><span data-year></span> © Alley Cats Hotel</p>
+    </footer>
+  </body>
+</html>
