@@ -1200,7 +1200,7 @@ details div {
 
 .original-home .original-header nav > a:not(.original-button):hover,
 .replica-page .original-header nav > a:not(.original-button):hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: #4f7891 !important;
 }
 
 .original-header nav > a:not(.original-button):hover::after,

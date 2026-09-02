@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="rates.css" />
     <script src="script.js" defer></script>
+    <script src="rates.js" defer></script>
   </head>
   <body class="replica-page">
     <header class="original-header">
@@ -40,113 +41,296 @@
           maintaining a consistently clean and pleasant facility.
         </h3>
       </section>
-      <section class="floor-title"><h2>Lower Floor</h2></section>
-      <section class="rate-row cream">
-        <img src="images/room-down-corner.jpg" alt="Corner Suite Room" />
-        <div class="rate-copy">
-          <h3>Corner Suite</h3>
-          <p class="rate-price">$65/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Our downstairs Corner Suites are extra spacious rooms featuring two
-            panoramic windows, perfect for your cat's viewing pleasure. They are
-            generously sized and can comfortably accommodate families of up to
-            five cats.
-          </p>
-          <p>Size: ~63 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
+      <section class="room-catalog" aria-label="Rooms and rates">
+        <section class="floor-group" aria-labelledby="lower-floor-title">
+          <h2 id="lower-floor-title" class="floor-heading">Lower Floor</h2>
+          <div class="rate-card-grid">
+            <article id="lower-corner-suite" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Lower Floor · Corner Suite"
+                aria-label="View the Lower Floor Corner Suite photo"
+              >
+                <img
+                  src="images/room-down-corner.jpg"
+                  alt="Lower Floor Corner Suite"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Corner Suite</h3>
+                  <p class="rate-card-price">
+                    <strong>$65</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Our downstairs Corner Suites are extra spacious rooms
+                  featuring two panoramic windows, perfect for your cat's
+                  viewing pleasure. They are generously sized and can
+                  comfortably accommodate families of up to five cats.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~63 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+            <article id="downstairs-pasture-view" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Lower Floor · Pasture View"
+                aria-label="View the Lower Floor Pasture View photo"
+              >
+                <img
+                  src="images/room-down-pasture.jpg"
+                  alt="Lower Floor Pasture View room"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Pasture View</h3>
+                  <p class="rate-card-price">
+                    <strong>$60</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Our Pasture View rooms are spacious and feature a panoramic
+                  window providing your feline friend with an unmatched viewing
+                  experience and can comfortably accommodate families of up to 4
+                  cats.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~42 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+            <article id="lower-playroom" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Lower Floor · Playroom"
+                aria-label="View the Playroom photo"
+              >
+                <img
+                  src="images/room-down-playroom.jpg"
+                  alt="Lower Floor Playroom"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Playroom</h3>
+                  <p class="rate-card-price">
+                    <strong>$95</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  The playroom is the largest room in the house and it was
+                  thoughtfully designed as a communal space for exploration and
+                  playtime for our downstairs guests. This room is available for
+                  booking during high season peaks, to accommodate and welcome
+                  all guests.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~88 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+            <article id="lower-studio" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Lower Floor · Studio"
+                aria-label="View the Lower Floor Studio photo"
+              >
+                <img
+                  src="images/room-down-studio.jpg"
+                  alt="Lower Floor Studio room"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Studio</h3>
+                  <p class="rate-card-price">
+                    <strong>$40</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Our downstairs Studio rooms provide a private and tranquil
+                  setting, with neighboring windows that offer natural light.
+                  This makes it an excellent choice for shyer cats who prefer a
+                  darker, smaller and quieter environment.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~29 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="floor-group" aria-labelledby="upper-floor-title">
+          <h2 id="upper-floor-title" class="floor-heading">Upper Floor</h2>
+          <div class="rate-card-grid">
+            <article id="upper-corner-suite" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Upper Floor · Corner Suite"
+                aria-label="View the Upper Floor Corner Suite photo"
+              >
+                <img
+                  src="images/room-up-corner.jpg"
+                  alt="Upper Floor Corner Suite"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Corner Suite</h3>
+                  <p class="rate-card-price">
+                    <strong>$55</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Larger and with additional windows and perches, our Corner
+                  Suites allow for a single cat or family of up to 4 cats to
+                  stay together comfortably. Additionally, the stunning view of
+                  the Alouette river adds an extra touch of luxury to their
+                  stay.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~56 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+            <article id="upper-vista-view" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Upper Floor · Vista View"
+                aria-label="View the Upper Floor Vista View photo"
+              >
+                <img
+                  src="images/room-up-vista.jpg"
+                  alt="Upper Floor Vista View room"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Vista View</h3>
+                  <p class="rate-card-price">
+                    <strong>$50</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Ideal for feline guests who love to birdwatch during the day
+                  and stargaze at night, our Vista View rooms boast stunning
+                  views and feature a small window and comfortable lounging
+                  shelves.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~37 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+            <article id="upper-studio" class="rate-card">
+              <button
+                class="rate-card-photo"
+                type="button"
+                data-room-photo
+                data-room-name="Upper Floor · Studio"
+                aria-label="View the Upper Floor Studio photo"
+              >
+                <img
+                  src="images/room-up-studio.jpg"
+                  alt="Upper Floor Studio room"
+                />
+                <span class="photo-hint"
+                  >View gallery <b aria-hidden="true">↗</b></span
+                >
+              </button>
+              <div class="rate-card-body">
+                <div class="rate-card-heading">
+                  <h3>Studio</h3>
+                  <p class="rate-card-price">
+                    <strong>$45</strong><span>/day</span
+                    ><small>first cat</small>
+                  </p>
+                </div>
+                <p class="rate-card-description">
+                  Our Studio rooms face the inside of the building and receive
+                  ample natural light, even if they doesn't have access to a
+                  window. This type of space can be just as soothing for your
+                  kitty, and you can create a comfortable environment with cozy
+                  bedding, toys and a scratching post.
+                </p>
+                <p class="rate-card-meta">
+                  <span>~32 ft²</span><span>$25/day extra cat</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
       </section>
-      <section id="downstairs-pasture-view" class="rate-row white reverse">
-        <img src="images/room-down-pasture.jpg" alt="Pasture View Room" />
-        <div class="rate-copy">
-          <h3>Pasture View</h3>
-          <p class="rate-price">$60/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Our Pasture View rooms are spacious and feature a panoramic window
-            providing your feline friend with an unmatched viewing experience
-            and can comfortably accommodate families of up to 4 cats.
-          </p>
-          <p>Size: ~42 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
-      <section class="rate-row cream">
-        <img src="images/room-down-playroom.jpg" alt="Playroom" />
-        <div class="rate-copy">
-          <h3>Playroom</h3>
-          <p class="rate-price">$95/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            The playroom is the largest room in the house and it was
-            thoughtfully designed as a communal space for exploration and
-            playtime for our downstairs guests. This room is available for
-            booking during high season peaks, to accommodate and welcome all
-            guests.
-          </p>
-          <p>Size: ~88 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
-      <section class="rate-row white reverse">
-        <img src="images/room-down-studio.jpg" alt="Studio Room" />
-        <div class="rate-copy">
-          <h3>Studio</h3>
-          <p class="rate-price">$40/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Our downstairs Studio rooms provide a private and tranquil setting,
-            with neighboring windows that offer natural light. This makes it an
-            excellent choice for shyer cats who prefer a darker, smaller and
-            quieter environment.
-          </p>
-          <p>Size: ~29 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
-      <section class="floor-title upper"><h2>Upper Floor</h2></section>
-      <section id="upper-corner-suite" class="rate-row cream">
-        <img src="images/room-up-corner.jpg" alt="Corner Suite Room" />
-        <div class="rate-copy">
-          <h3>Corner Suite</h3>
-          <p class="rate-price">$55/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Larger and with additional windows and perches, our Corner Suites
-            allow for a single cat or family of up to 4 cats to stay together
-            comfortably. Additionally, the stunning view of the Alouette river
-            adds an extra touch of luxury to their stay.
-          </p>
-          <p>Size: ~56 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
-      <section id="upper-vista-view" class="rate-row white reverse">
-        <img src="images/room-up-vista.jpg" alt="Vista View Room" />
-        <div class="rate-copy">
-          <h3>Vista View</h3>
-          <p class="rate-price">$50/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Ideal for feline guests who love to birdwatch during the day and
-            stargaze at night, our Vista View rooms boast stunning views and
-            features a small window and comfortable lounging shelves.
-          </p>
-          <p>Size: ~37 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
-      <section id="upper-studio" class="rate-row cream">
-        <img src="images/room-up-studio.jpg" alt="Studio Room" />
-        <div class="rate-copy">
-          <h3>Studio</h3>
-          <p class="rate-price">$45/day (1st cat)<br />$25/day (extra cat)</p>
-          <p>
-            Our Studio rooms face the inside of the building and receive ample
-            natural light, even if they doesn't have access to a window. This
-            type of space can be just as soothing for your kitty, and you can
-            create a comfortable environment with cozy bedding, toys and a
-            scratching post.
-          </p>
-          <p>Size: ~32 ft²</p>
-          <a class="original-button" href="portal.html">Book Now</a>
-        </div>
-      </section>
+      <dialog
+        class="room-lightbox"
+        id="room-lightbox"
+        aria-label="Room photo gallery"
+      >
+        <button
+          class="room-lightbox-close"
+          type="button"
+          aria-label="Close photo gallery"
+        >
+          ×
+        </button>
+        <button
+          class="room-gallery-arrow previous"
+          type="button"
+          aria-label="Previous room photo"
+        >
+          ‹
+        </button>
+        <div class="room-lightbox-track" tabindex="0"></div>
+        <button
+          class="room-gallery-arrow next"
+          type="button"
+          aria-label="Next room photo"
+        >
+          ›
+        </button>
+        <p class="room-lightbox-counter" aria-live="polite"></p>
+      </dialog>
       <section class="services-replica">
         <h2>Additional Services</h2>
         <p class="services-lead">
