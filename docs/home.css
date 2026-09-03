@@ -426,7 +426,7 @@
 }
 
 .original-start li::before {
-  content: counter(booking-step, decimal-leading-zero);
+  content: counter(booking-step);
   display: grid;
   place-items: center;
   width: 38px;
@@ -436,6 +436,10 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
+}
+
+.original-start a {
+  color: var(--navy);
 }
 
 @media (min-width: 768px) {
@@ -472,7 +476,7 @@
 
 /* Modern room cards. */
 .original-rooms {
-  background: #faf6ec;
+  background: #fff;
 }
 
 .original-rooms h2 {

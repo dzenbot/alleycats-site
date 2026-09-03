@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
     />
+    <meta id="page-theme-color" name="theme-color" content="#ffffff" />
     <title>Premium Cat Boarding in Pitt Meadows, BC — Alley Cats Hotel</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="rates.css" />
+    <link rel="stylesheet" href="rates.css?v=4" />
     <script src="script.js" defer></script>
-    <script src="rates.js" defer></script>
+    <script src="rates.js?v=7" defer></script>
   </head>
   <body class="replica-page">
     <header class="original-header">
@@ -27,7 +28,7 @@
     </header>
     <main>
       <section class="replica-hero rates-replica-hero">
-        <img src="images/room-down-playroom.jpg" alt="" />
+        <img src="images/room-playroom1.jpg" alt="" />
         <div class="replica-hero-copy">
           <h1>Chose the purrfect room for your cat</h1>
           <p class="hero-description">
@@ -54,10 +55,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Lower Floor · Corner Suite"
+                data-gallery="images/room-down-corner1.jpg images/room-down-corner2.jpg"
                 aria-label="View the Lower Floor Corner Suite photo"
               >
                 <img
-                  src="images/room-down-corner.jpg"
+                  src="images/room-down-corner1.jpg"
                   alt="Lower Floor Corner Suite"
                 />
                 <span class="photo-hint"
@@ -89,10 +91,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Lower Floor · Pasture View"
+                data-gallery="images/room-down-pasture1.jpg images/room-down-pasture2.jpg images/room-down-pasture3.jpg images/room-down-pasture4.jpg"
                 aria-label="View the Lower Floor Pasture View photo"
               >
                 <img
-                  src="images/room-down-pasture.jpg"
+                  src="images/room-down-pasture1.jpg"
                   alt="Lower Floor Pasture View room"
                 />
                 <span class="photo-hint"
@@ -124,10 +127,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Lower Floor · Playroom"
+                data-gallery="images/room-playroom1.jpg images/room-playroom2.jpg"
                 aria-label="View the Playroom photo"
               >
                 <img
-                  src="images/room-down-playroom.jpg"
+                  src="images/room-playroom1.jpg"
                   alt="Lower Floor Playroom"
                 />
                 <span class="photo-hint"
@@ -160,10 +164,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Lower Floor · Studio"
+                data-gallery="images/room-down-studio1.jpg images/room-down-studio2.jpg images/room-down-studio3.jpg images/room-down-studio4.jpg images/room-down-studio5.jpg"
                 aria-label="View the Lower Floor Studio photo"
               >
                 <img
-                  src="images/room-down-studio.jpg"
+                  src="images/room-down-studio1.jpg"
                   alt="Lower Floor Studio room"
                 />
                 <span class="photo-hint"
@@ -201,10 +206,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Upper Floor · Corner Suite"
+                data-gallery="images/room-up-corner1.jpg images/room-up-corner2.jpg images/room-up-corner3.jpg"
                 aria-label="View the Upper Floor Corner Suite photo"
               >
                 <img
-                  src="images/room-up-corner.jpg"
+                  src="images/room-up-corner1.jpg"
                   alt="Upper Floor Corner Suite"
                 />
                 <span class="photo-hint"
@@ -237,10 +243,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Upper Floor · Vista View"
+                data-gallery="images/room-up-vista1.jpg images/room-up-vista2.jpg images/room-up-vista3.jpg images/room-up-vista4.jpg images/room-up-vista5.jpg images/room-up-vista6.jpg"
                 aria-label="View the Upper Floor Vista View photo"
               >
                 <img
-                  src="images/room-up-vista.jpg"
+                  src="images/room-up-vista1.jpg"
                   alt="Upper Floor Vista View room"
                 />
                 <span class="photo-hint"
@@ -272,10 +279,11 @@
                 type="button"
                 data-room-photo
                 data-room-name="Upper Floor · Studio"
+                data-gallery="images/room-up-studio1.jpg images/room-up-studio2.jpg images/room-up-studio3.jpg images/room-up-studio4.jpg images/room-up-studio5.jpg"
                 aria-label="View the Upper Floor Studio photo"
               >
                 <img
-                  src="images/room-up-studio.jpg"
+                  src="images/room-up-studio1.jpg"
                   alt="Upper Floor Studio room"
                 />
                 <span class="photo-hint"
@@ -305,35 +313,40 @@
           </div>
         </section>
       </section>
-      <dialog
+      <div
         class="room-lightbox"
         id="room-lightbox"
+        role="dialog"
+        aria-modal="true"
         aria-label="Room photo gallery"
+        hidden
       >
         <button
           class="room-lightbox-close"
           type="button"
           aria-label="Close photo gallery"
         >
-          ×
-        </button>
-        <button
-          class="room-gallery-arrow previous"
-          type="button"
-          aria-label="Previous room photo"
-        >
-          ‹
+          <span></span><span></span>
         </button>
         <div class="room-lightbox-track" tabindex="0"></div>
-        <button
-          class="room-gallery-arrow next"
-          type="button"
-          aria-label="Next room photo"
-        >
-          ›
-        </button>
-        <p class="room-lightbox-counter" aria-live="polite"></p>
-      </dialog>
+        <div class="room-gallery-controls">
+          <button
+            class="room-gallery-arrow previous"
+            type="button"
+            aria-label="Previous room photo"
+          >
+            <span aria-hidden="true"></span>
+          </button>
+          <p class="room-lightbox-counter" aria-live="polite"></p>
+          <button
+            class="room-gallery-arrow next"
+            type="button"
+            aria-label="Next room photo"
+          >
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
       <section id="additional-services" class="services-replica">
         <h2>Additional Services</h2>
         <p class="services-lead">

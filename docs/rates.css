@@ -263,60 +263,103 @@ html {
 }
 
 .room-lightbox {
-  width: min(96vw, 1800px);
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100vw;
   max-width: none;
-  height: 92vh;
+  height: 100dvh;
   max-height: none;
-  margin: auto;
+  margin: 0;
   padding: 0;
   overflow: hidden;
   border: 0;
-  background: transparent;
-  color: #fff;
-}
-.room-lightbox[open] {
-  display: block;
-}
-.room-lightbox::backdrop {
   background: rgba(0, 0, 0, 0.86);
   backdrop-filter: blur(3px);
+  color: #fff;
+  opacity: 0;
+}
+.room-lightbox[hidden] {
+  display: none;
+}
+.room-lightbox.is-open {
+  display: block;
+  animation: room-gallery-in 320ms ease forwards;
+}
+.room-lightbox.is-open.is-closing {
+  animation: room-gallery-out 280ms ease forwards;
+}
+@keyframes room-gallery-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes room-gallery-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .room-lightbox-track {
-  display: flex;
+  display: grid;
   width: 100%;
   height: 100%;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-.room-lightbox-track::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
+  outline: none;
+  touch-action: none;
 }
 .room-lightbox-slide {
   display: grid;
-  flex: 0 0 100%;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto minmax(0, 1fr);
   place-items: center;
+  width: 100%;
+  height: 100%;
   min-width: 0;
   margin: 0;
   padding: 66px 84px 48px;
-  scroll-snap-align: center;
+  overflow: hidden;
 }
-.room-lightbox-slide img {
+.room-lightbox-heading {
+  width: 100%;
+  text-align: center;
+}
+.room-lightbox-image-stage {
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 0;
+  overflow: hidden;
+}
+.room-lightbox-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
   object-fit: contain;
+  object-position: center center;
+  opacity: 0;
+  transition: opacity 420ms ease;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.room-lightbox-slide img.is-active {
+  z-index: 1;
+  opacity: 1;
 }
 .room-lightbox-slide figcaption {
-  margin-top: 18px;
+  margin-bottom: 18px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+.room-gallery-controls {
+  display: contents;
 }
 .room-lightbox-close,
 .room-gallery-arrow {
@@ -337,25 +380,37 @@ html {
   background: transparent;
 }
 .room-lightbox-close {
-  top: 18px;
+  top: 6px;
   right: 20px;
-  width: 42px;
-  height: 42px;
-  font-size: 30px;
-  font-weight: 200;
-  line-height: 1;
+  width: 54px;
+  height: 54px;
+}
+.room-lightbox-close span {
+  position: absolute;
+  width: 30px;
+  height: 1.5px;
+  background: currentColor;
+}
+.room-lightbox-close span:first-child {
+  transform: rotate(45deg);
+}
+.room-lightbox-close span:last-child {
+  transform: rotate(-45deg);
 }
 .room-lightbox-close:hover {
   transform: scale(1.05);
 }
 .room-gallery-arrow {
   top: 50%;
-  width: 42px;
-  height: 58px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 48px;
-  font-weight: 200;
+  width: 56px;
+  height: 64px;
   transform: translateY(-50%);
+}
+.room-gallery-arrow span {
+  width: 24px;
+  height: 24px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
 }
 .room-gallery-arrow:hover {
   transform: translateY(-50%) scale(1.05);
@@ -363,8 +418,17 @@ html {
 .room-gallery-arrow.previous {
   left: 18px;
 }
+.room-gallery-arrow.previous span {
+  transform: rotate(-135deg);
+}
 .room-gallery-arrow.next {
   right: 18px;
+}
+.room-gallery-arrow.next span {
+  transform: rotate(45deg);
+}
+.room-gallery-arrow[hidden] {
+  display: none;
 }
 .room-lightbox-counter {
   position: absolute;
@@ -579,16 +643,78 @@ html {
   .rate-card-description {
     min-height: 0;
   }
+  .photo-hint {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .room-lightbox {
+    position: absolute;
+    top: var(--gallery-page-top, 0);
+    right: 0;
+    bottom: auto;
+    left: 0;
     width: 100vw;
     height: 100dvh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+  }
+  .room-lightbox::before {
+    position: absolute;
+    inset: -240px;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+    content: "";
+    pointer-events: none;
+  }
+  .room-lightbox.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .room-lightbox-track {
+    flex: 0 0 auto;
+    height: auto;
   }
   .room-lightbox-slide {
-    padding: 60px 18px 55px;
+    display: flex;
+    height: auto;
+    padding: 0 18px;
+    flex-direction: column;
+    overflow: visible;
+  }
+  .room-lightbox-heading {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .room-lightbox-slide figcaption {
+    margin: 0;
+  }
+  .room-lightbox-image-stage {
+    flex: none;
+    width: min(calc(100vw - 36px), 900px);
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .room-lightbox-image-stage.is-portrait {
+    width: min(calc(100vw - 36px), 50dvh);
+    max-height: 70dvh;
+    aspect-ratio: 3 / 4;
+  }
+  .room-lightbox-image-stage.is-portrait img {
+    object-fit: cover;
+  }
+  .room-gallery-controls {
+    display: flex;
+    width: min(260px, 75vw);
+    margin: 40px auto 0;
+    align-items: center;
+    justify-content: space-between;
   }
   .room-gallery-arrow {
-    top: auto;
-    bottom: 14px;
+    position: static;
     width: 42px;
     height: 42px;
     transform: none;
@@ -597,9 +723,20 @@ html {
     transform: scale(1.05);
   }
   .room-lightbox-counter {
-    right: 50%;
-    bottom: 27px;
-    transform: translateX(50%);
+    position: static;
+    font-size: 14px;
+    transform: none;
+  }
+  .room-lightbox-close {
+    position: fixed;
+    top: max(10px, env(safe-area-inset-top));
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    transform: none;
+  }
+  .room-lightbox-close:hover {
+    transform: scale(1.05);
   }
   .services-replica {
     padding: var(--section-space-mobile) 8vw;
@@ -610,12 +747,21 @@ html {
   }
 }
 
+html.room-gallery-open,
+body.room-gallery-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rate-card-photo img,
   .rate-card-photo::after,
   .photo-hint,
-  .room-lightbox-track {
-    scroll-behavior: auto;
+  .room-lightbox-slide img {
     transition: none;
+  }
+
+  .room-lightbox.is-open {
+    animation-duration: 0s;
   }
 }
