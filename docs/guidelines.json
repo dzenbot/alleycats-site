@@ -3,7 +3,8 @@
     "question": "What are your check-in & check-out policies?",
     "answer": [
       "Alley Cats Hotel is open to incoming and departing guests by appointment only. Our appointment times are available every day, Monday to Sunday, during two time slots:",
-      "10:00AM to 1:30PM and 2:30PM-6:00PM",
+      "10:00 AM to 1:30 PM",
+      "and 2:30 PM to 6:00 PM",
       "We require a set appointment time to ensure we will be completely available to give you and your fur baby the one-on-one attention needed during this process. We also like to ensure that we have enough time to install your camera app on your device.",
       "Please note that, although operational, we are not open for check-ins or check-outs on any BC statutory holidays. We are also closed to the public during Christmas Days (Dec 24th & 25th) and New Year’s Days (Dec 31st & Jan 1st).",
       "A penalty of 50% daily rate will be charged at check out in case of arriving on non operational hours. A full daily rate will be charged if departing, 1 or more days earlier, without notifying us with at least 2 days in advance."
@@ -27,11 +28,18 @@
     ]
   },
   {
-    "question": "What vaccines and precedures are required for my cat(s)?",
+    "question": "What vaccines and precedures are required for my cat?",
     "answer": [
       "All cats over six months old must be spayed or neutered. We require vaccinations against FVRCP, FeLV, and Rabies for outdoor cats. Please provide immunization records before arrival, have your veterinarian email them, or upload them to your cat’s profile.",
       "Cats over 10 years old are considered senior and are not required to update their vaccines, although we still require their previous records.",
       "If you opt out of the FeLV vaccine, you must provide a blood test from a veterinary clinic confirming no infection within 7 days before check-in. Flea and tick prevention is strongly recommended."
+    ]
+  },
+  {
+    "question": "Why do you require the FeLV vaccine?",
+    "answer": [
+      "Feline Leukemia Virus is an infectious disease transmitted through bodily fluids. To protect all guests, cats must be vaccinated against FeLV whether they live indoors or outdoors.",
+      "If you opt out of vaccination, you must provide a blood test from a veterinary clinic confirming no infection within 7 days before check-in."
     ]
   },
   {
@@ -47,13 +55,6 @@
     "answer": [
       "Depending on your cat’s temperament and for a fee, we can administer prescribed oral medication including pills, capsules, liquids and puff medication. Medication or probiotics given through food incur no additional charge.",
       "We are currently unable to provide injectable medication."
-    ]
-  },
-  {
-    "question": "Why do you require the FeLV vaccine?",
-    "answer": [
-      "Feline Leukemia Virus is an infectious disease transmitted through bodily fluids. To protect all guests, cats must be vaccinated against FeLV whether they live indoors or outdoors.",
-      "If you opt out of vaccination, you must provide a blood test from a veterinary clinic confirming no infection within 7 days before check-in."
     ]
   },
   {
@@ -82,7 +83,7 @@
     "question": "How do the cameras work?",
     "answer": [
       "Each room has an HD camera with night vision and no audio. You can monitor your cat from an iOS or Android device with a reliable internet connection.",
-      "You will receive setup instructions at check-in. We recommend downloading the app before arrival from app.alleycatshotel.com.",
+      "You will receive setup instructions at check-in. We recommend downloading the app before arrival from https://alleycatshotel.com/hikconnect.",
       "Camera access is complimentary and intended for monitoring only. The software is provided by a third party and may not be compatible with every device."
     ]
   },

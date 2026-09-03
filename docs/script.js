@@ -21,7 +21,7 @@ if (menuButton && nav) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1050) setMenuState(false);
+    if (window.innerWidth > 1180) setMenuState(false);
   });
 }
 

@@ -28,7 +28,7 @@
 }
 
 .faq-page h1 {
-  font-size: 63px;
+  font-size: 58px;
   text-align: center;
   margin: 0 0 65px;
 }
@@ -103,6 +103,22 @@
   margin-bottom: 85px;
 }
 
+.faq-page h1::after {
+  display: block;
+  width: 130px;
+  height: 20px;
+  margin: 13px auto 0;
+  background:
+    linear-gradient(#fff, #fff) left center / 48px 1px no-repeat,
+    linear-gradient(#fff, #fff) right center / 48px 1px no-repeat;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  content: "✦";
+}
+
 .dynamic-faq {
   width: 100%;
 }
@@ -135,7 +151,8 @@
   gap: 2rem;
   text-align: left;
   font:
-    300 24px/1.4 Poppins,
+    300 24px/1.4 "Helvetica Neue",
+    Arial,
     sans-serif;
   cursor: pointer;
   transition:
@@ -143,8 +160,10 @@
     color 0.25s ease;
 }
 
-.faq-question:hover {
-  background: rgba(255, 255, 255, 0.07);
+@media (hover: hover) and (pointer: fine) {
+  .faq-question:hover {
+    background: rgba(255, 255, 255, 0.07);
+  }
 }
 
 .faq-question:focus-visible {
@@ -184,6 +203,8 @@
 
 .faq-answer-content {
   padding: 0 4% 35px 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .faq-answer p {
@@ -193,6 +214,9 @@
 .faq-answer a {
   color: inherit;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  font-weight: 400;
 }
 
 .faq-item.is-open .faq-answer {
@@ -226,8 +250,16 @@
   }
 
   .faq-question {
+    width: calc(100% + 16vw);
+    margin-right: -8vw;
+    margin-left: -8vw;
     font-size: 20px;
-    padding: 27px 0;
+    font-weight: 400;
+    padding: 27px 8vw;
+  }
+
+  .faq-question:active {
+    background: rgba(255, 255, 255, 0.07);
   }
 
   .faq-answer-inner {

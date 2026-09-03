@@ -516,7 +516,7 @@ html {
   text-align: left;
 }
 .services-disclaimer strong {
-  color: var(--copy-dark);
+  color: var(--navy);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.1em;
