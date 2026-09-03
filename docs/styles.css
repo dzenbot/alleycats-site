@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
 
 :root {
   --navy: #0b3f5b;
   --deep: #073149;
   --gold: #e8b529;
   --ink: #17313e;
+  --copy-dark: #242424;
   --cream: #f5f2ea;
   --white: #fff;
   --line: #d9dedf;
@@ -28,6 +30,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
   line-height: 1.6;
+  touch-action: pan-x pan-y;
 }
 
 img {
@@ -585,7 +588,7 @@ summary {
   list-style: none;
   cursor: pointer;
   padding: 1.5rem 3rem 1.5rem 0;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 1.15rem;
   font-weight: 500;
   position: relative;
@@ -818,6 +821,7 @@ details div {
 
 .original-header nav > a:not(.original-button) {
   padding: 14px 0;
+  color: var(--navy);
 }
 
 .original-button {
@@ -852,14 +856,14 @@ details div {
   display: grid;
   grid-template-columns: repeat(3, 1fr) 0.55fr;
   gap: 4vw;
-  font-family: Poppins, "DM Sans", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.8;
   color: var(--navy);
 }
 
 .original-footer h3 {
-  font-family: Poppins, "DM Sans", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 0;
@@ -893,12 +897,12 @@ details div {
 
 @media (max-width: 800px) {
   .original-header {
-    height: 100px;
+    height: 92px;
     padding: 0 6vw;
   }
 
   .original-logo img {
-    width: 190px;
+    width: min(250px, calc(100vw - 120px));
     height: auto;
   }
 
@@ -1013,8 +1017,6 @@ details div {
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-
 /* Shared refinements, consolidated from the former fix/final files. */
 @media (min-width: 768px) {
   .original-header {
@@ -1080,11 +1082,12 @@ details div {
 }
 
 .original-footer h3 {
-  font-family: Poppins, sans-serif;
-  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
   font-weight: 200;
   line-height: 1.4;
   letter-spacing: 0.02em;
+  color: #686868;
 }
 
 .original-footer a[href^="mailto:"],
@@ -1193,7 +1196,7 @@ details div {
 
 .original-home .original-header nav > a:not(.original-button):hover,
 .replica-page .original-header nav > a:not(.original-button):hover {
-  color: #4f7891 !important;
+  color: var(--navy) !important;
 }
 
 .original-header nav > a:not(.original-button):hover::after,
@@ -1221,6 +1224,188 @@ details div {
   .original-button:hover,
   .original-logo:hover img {
     scale: 1;
+  }
+}
+
+/* Switch to the compact header before the navigation reaches the logo. */
+@media (max-width: 1050px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .original-copyright {
+    position: relative;
+    top: 12px;
+  }
+
+  .original-header {
+    height: 100px;
+    padding: 0 6vw;
+  }
+
+  .original-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+  }
+
+  .original-logo img {
+    width: 190px;
+    height: auto;
+  }
+
+  .original-header .menu {
+    display: block;
+    position: relative;
+    z-index: 4;
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .original-header .menu span {
+    position: absolute;
+    left: 10px;
+    width: 25px;
+    margin: 0;
+    transition:
+      top 260ms ease,
+      transform 260ms ease;
+  }
+
+  .original-header .menu span:first-child {
+    top: 16px;
+  }
+
+  .original-header .menu span:last-child {
+    top: 28px;
+  }
+
+  .original-header .menu[aria-expanded="true"] span:first-child {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+
+  .original-header .menu[aria-expanded="true"] span:last-child {
+    top: 22px;
+    transform: rotate(-45deg);
+  }
+
+  .original-header nav {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    min-height: 100dvh;
+    padding: 0 8vw;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 280ms ease,
+      visibility 0s linear 280ms;
+  }
+
+  .original-header nav.open {
+    visibility: visible;
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  .original-header nav > a,
+  .original-header nav > .original-button {
+    position: relative;
+    top: auto;
+    right: auto !important;
+    left: auto !important;
+    opacity: 0;
+    transform: translateY(12px) !important;
+    transition:
+      color 280ms ease,
+      opacity 280ms ease,
+      transform 280ms ease;
+  }
+
+  .original-header nav.open > a,
+  .original-header nav.open > .original-button {
+    opacity: 1;
+    transform: translateY(0) !important;
+  }
+
+  .original-header nav > a:not(.original-button) {
+    width: auto;
+    padding: 12px 0;
+    align-self: flex-end;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(26px, 4.25vw, 34px);
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    text-align: right;
+  }
+
+  .original-header nav > a:not(.original-button) + a:not(.original-button) {
+    margin-top: 36px;
+  }
+
+  .original-header nav > .original-button {
+    position: absolute;
+    right: 8vw !important;
+    bottom: 48px;
+    left: auto !important;
+    min-width: 220px;
+    margin-top: 0;
+    padding: 20px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .original-header nav > a:not(.original-button)::after {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1051px) {
+  .original-footer {
+    height: 300px;
+  }
+
+  .original-header nav {
+    position: static;
+    inset: auto;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    align-items: center;
+    gap: 100px;
+    pointer-events: auto;
+  }
+
+  .original-header nav > a,
+  .original-header nav > .original-button {
+    position: relative;
+    top: auto;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  .original-header nav > .original-button {
+    margin-left: 0;
   }
 }
 

@@ -24,7 +24,7 @@ fetch("camera-credentials.json")
     cameraRoomSelect.addEventListener("change", () => {
       const room = rooms.find((item) => item.value === cameraRoomSelect.value);
       if (!room) {
-        showCameraMessage("Select your room to display its camera details.");
+        cameraCredentials.textContent = "";
         return;
       }
 

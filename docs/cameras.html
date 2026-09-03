@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <meta
       name="description"
       content="Camera setup instructions for Alley Cats Hotel guests"
@@ -31,69 +34,88 @@
     <main class="camera-main">
       <section class="camera-guide">
         <h1>Camera Setup Instructions</h1>
-        <p>
-          To set up Hik-Connect, a third-party camera app, on your phone/tablet
-          (iOS or Android), please follow these simple steps:
+        <p class="camera-intro">
+          Watch your cat(s) from your iOS or Android devices.<br />To get
+          started, please follow the simple steps.
         </p>
-        <ol>
+
+        <ol class="camera-steps">
           <li>
-            Before proceeding, if you already have the
-            <strong>Hik-Connect</strong> app installed and configured, please
-            delete the previous configuration or uninstall the app.
+            <div class="camera-step-copy">
+              <h2>Select your room</h2>
+              <p>The camera credentials are unique to your room.</p>
+            </div>
+            <div class="camera-room-picker">
+              <label for="camera-room"
+                >Choose your room number to reveal the credentials</label
+              >
+              <select id="camera-room" required>
+                <option value="">Select your room…</option>
+              </select>
+              <div
+                id="camera-credentials"
+                class="camera-credentials"
+                aria-live="polite"
+              ></div>
+            </div>
           </li>
           <li>
-            Download and install the free app by visiting
-            <a href="https://app.alleycatshotel.com/">app.alleycatshotel.com</a>
-            or
-            <a href="https://appstore.hikvision.com/0yGe"
-              >appstore.hikvision.com/0yGe</a
-            >. If your cell network is slow, try our open Wi-Fi
-            <strong>AlleyCat-Guest</strong> (no password needed).
+            <div class="camera-step-copy">
+              <h2>Install Hik-Connect</h2>
+              <p>
+                <a href="https://app.alleycatshotel.com/"
+                  >Tap here to install the free app Hik-Connect for iOS and
+                  Android</a
+                ><br />If the app was previously configured on this device,
+                delete the old configuration or reinstall the app before
+                continuing.
+              </p>
+            </div>
           </li>
           <li>
-            Open the app. You don’t need to allow permission for location,
-            notifications, or alerts.
-          </li>
-          <li>Scroll horizontally and press <strong>Start Now</strong>.</li>
-          <li>
-            Press Agree for the <strong>Privacy Policy</strong> and
-            <strong>Terms of Service</strong>.
-          </li>
-          <li>
-            Under Region, select Canada and press <strong>OK</strong>, or skip
-            entirely.
+            <div class="camera-step-copy">
+              <h2>Prepare the app</h2>
+              <p>
+                Open the Hik-Connect app, swipe to
+                <strong>Start Now</strong>, accept the terms, and select
+                <strong>Canada</strong> as your region. Location, notification
+                and alert permissions are optional.
+              </p>
+            </div>
           </li>
           <li>
-            Press the <strong>“+”</strong> icon in the top-right corner and
-            choose <strong>Manual Adding</strong> → <strong>IP/Domain</strong>.
+            <div class="camera-step-copy">
+              <h2>Add your room camera</h2>
+              <p>
+                Tap <strong>+</strong>, then choose
+                <strong>Manual Adding → IP/Domain</strong>. Enter the
+                credentials shown in Step 1 and tap <strong>Save</strong>.
+              </p>
+              <p class="camera-step-note">
+                Passwords are case-sensitive. We recommend copying and pasting
+                the credentials. Please note that too many attempts will block
+                the device for one hour.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="camera-step-copy">
+              <h2>Start watching</h2>
+              <p>
+                Tap <strong>“Start Live View”</strong>, then select your room's
+                thumbnail. You're all set!
+              </p>
+            </div>
           </li>
         </ol>
-
-        <div class="camera-room-picker">
-          <label for="camera-room">Camera Credentials</label>
-          <select id="camera-room">
-            <option value="">Choose your room</option>
-          </select>
-          <div
-            id="camera-credentials"
-            class="camera-credentials"
-            aria-live="polite"
-          >
-            <p>Select your room to display its camera details.</p>
-          </div>
-        </div>
-
-        <ol start="8">
-          <li>
-            Press the <strong>Save</strong> icon in the top-right of the screen.
-          </li>
-          <li>Finally, press <strong>Start Live View</strong>.</li>
-          <li>
-            From the list of thumbnails, find and press the thumbnail for your
-            room.
-          </li>
-        </ol>
-        <h2>Enjoy watching your cat(s)!</h2>
+        <p class="camera-finish">Enjoy watching your cat(s)!</p>
+        <p class="camera-support">
+          Facing technical issues? Email us at
+          <a href="mailto:contact@alleycatshotel.com"
+            >contact@alleycatshotel.com</a
+          >, sharing screenshots and a short description of the issue. Remote
+          support can be challenging, but we'll always do our best to help.
+        </p>
       </section>
     </main>
 

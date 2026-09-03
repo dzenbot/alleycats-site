@@ -226,6 +226,10 @@
   text-decoration: underline;
 }
 
+.original-start-inner > p:last-of-type {
+  color: #686868;
+}
+
 .original-start .original-button {
   margin-top: 12px;
 }
@@ -588,6 +592,7 @@
 }
 
 .original-room-copy p {
+  color: var(--copy-dark);
   font-size: 15px;
   line-height: 1.65;
 }

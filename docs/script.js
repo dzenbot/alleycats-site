@@ -1,11 +1,44 @@
 const menuButton = document.querySelector(".menu");
 const nav = document.querySelector("header nav");
 if (menuButton && nav) {
+  const setMenuState = (open) => {
+    nav.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
   menuButton.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", open);
+    setMenuState(!nav.classList.contains("open"));
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuState(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1050) setMenuState(false);
   });
 }
+
+const preventPageZoom = (event) => event.preventDefault();
+
+document.addEventListener("gesturestart", preventPageZoom, { passive: false });
+document.addEventListener("gesturechange", preventPageZoom, { passive: false });
+document.addEventListener("gestureend", preventPageZoom, { passive: false });
+document.addEventListener(
+  "touchmove",
+  (event) => {
+    if (event.touches.length > 1) event.preventDefault();
+  },
+  { passive: false },
+);
+document.addEventListener("dblclick", preventPageZoom, { passive: false });
+
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 document
   .querySelectorAll('.original-header nav a[href$=".html"]')

@@ -245,7 +245,7 @@ html {
   order: 3;
   min-height: 3.25em;
   margin: 19px 0 0;
-  color: #344c59;
+  color: var(--copy-dark);
   font-size: 15px;
   line-height: 1.65;
 }
@@ -487,14 +487,14 @@ html {
 }
 .service-replica-grid p {
   margin: 0;
-  color: #50636d;
+  color: var(--copy-dark);
   font-size: 15px;
   line-height: 1.65;
 }
 .services-note {
   max-width: 900px;
   margin: 58px auto 0;
-  color: #52656f;
+  color: var(--copy-dark);
   text-align: center;
 }
 .services-booking-note {
@@ -511,13 +511,13 @@ html {
   padding: 19px 22px;
   border-left: 2px solid var(--navy);
   background: rgba(255, 255, 255, 0.68);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
   text-align: left;
 }
 .services-disclaimer strong {
-  color: var(--navy);
-  font-size: 11px;
+  color: var(--copy-dark);
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
