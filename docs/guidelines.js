@@ -1,4 +1,9 @@
 const faqList = document.querySelector("#faq-list");
+const searchInput = document.querySelector("#guidelines-search-input");
+const searchClear = document.querySelector("#guidelines-search-clear");
+const searchStatus = document.querySelector("#guidelines-search-status");
+const emptyMessage = document.querySelector("#guidelines-empty");
+const resultsClear = document.querySelector("#guidelines-results-clear");
 
 function appendLinkifiedText(element, text) {
   const linkPattern =
@@ -49,6 +54,7 @@ fetch("guidelines.json")
   .then((items) => {
     faqList.textContent = "";
     const openFirstItem = !window.matchMedia("(max-width: 767px)").matches;
+    const renderedItems = [];
 
     items.forEach((item, index) => {
       const initiallyOpen = index === 0 && openFirstItem;
@@ -94,7 +100,49 @@ fetch("guidelines.json")
 
       article.append(button, answer);
       faqList.appendChild(article);
+      renderedItems.push({
+        article,
+        searchText: `${item.question} ${item.answer.join(" ")}`.toLowerCase(),
+      });
     });
+
+    searchInput.disabled = false;
+    const filterQuestions = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      let firstVisibleItem = null;
+
+      renderedItems.forEach(({ article, searchText }) => {
+        const matches = !query || searchText.includes(query);
+        article.classList.remove("is-open", "is-first-visible");
+        article
+          .querySelector(".faq-question")
+          .setAttribute("aria-expanded", "false");
+        article.hidden = !matches;
+        if (matches) {
+          visibleCount += 1;
+          firstVisibleItem ??= article;
+        }
+      });
+
+      firstVisibleItem?.classList.add("is-first-visible");
+
+      emptyMessage.hidden = visibleCount !== 0;
+      resultsClear.hidden = !query;
+      searchStatus.textContent = query
+        ? `${visibleCount} matching ${visibleCount === 1 ? "question" : "questions"}`
+        : "";
+    };
+
+    const clearSearch = () => {
+      searchInput.value = "";
+      filterQuestions();
+      searchInput.focus();
+    };
+
+    searchInput.addEventListener("input", filterQuestions);
+    searchClear.addEventListener("click", clearSearch);
+    resultsClear.addEventListener("click", clearSearch);
   })
   .catch(() => {
     faqList.innerHTML =

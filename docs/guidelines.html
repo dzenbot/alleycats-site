@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="guidelines.css" />
     <script src="script.js" defer></script>
-    <script src="guidelines.js?v=3" defer></script>
+    <script src="guidelines.js?v=6" defer></script>
   </head>
   <body class="replica-page">
     <header class="original-header">
@@ -27,11 +27,68 @@
     </header>
     <main>
       <section class="faq-page">
-        <h1>Our Policies &amp; Guidelines</h1>
-        <div id="faq-list" class="dynamic-faq" aria-live="polite">
-          <p class="faq-loading">Loading questions…</p>
+        <div class="guidelines-layout">
+          <aside class="guidelines-intro">
+            <div class="guidelines-title">
+              <h1><span>Our Guidelines</span><span>&amp; Policies</span></h1>
+              <span class="guidelines-title-ornament" aria-hidden="true"
+                >✦</span
+              >
+            </div>
+            <p class="guidelines-intro-copy">
+              Everything you need to know about your cat's stay is collected
+              here. If you still have questions, please
+              <a href="mailto:contact@alleycatshotel.com">email us</a> and we'll
+              be happy to help.
+            </p>
+            <div class="guidelines-search">
+              <label for="guidelines-search-input">Search this page</label>
+              <div class="guidelines-search-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5"></circle>
+                  <path d="m16 16 4 4"></path>
+                </svg>
+                <input
+                  id="guidelines-search-input"
+                  type="search"
+                  placeholder="Try “food,” “payment” or “camera”"
+                  autocomplete="off"
+                  disabled
+                />
+                <button
+                  id="guidelines-search-clear"
+                  class="guidelines-search-clear"
+                  type="button"
+                  aria-label="Clear search"
+                >
+                  <span></span><span></span>
+                </button>
+              </div>
+              <p
+                id="guidelines-search-status"
+                class="guidelines-search-status"
+                aria-live="polite"
+              ></p>
+            </div>
+          </aside>
+          <div class="guidelines-results">
+            <div id="faq-list" class="dynamic-faq" aria-live="polite">
+              <p class="faq-loading">Loading questions…</p>
+            </div>
+            <p id="guidelines-empty" class="guidelines-empty" hidden>
+              No matching questions found. Try a different word or email us for
+              help.
+            </p>
+            <button
+              id="guidelines-results-clear"
+              class="original-button guidelines-results-clear"
+              type="button"
+              hidden
+            >
+              Clear Search
+            </button>
+          </div>
         </div>
-        <a class="original-button" href="portal.html">Book Now</a>
       </section>
     </main>
     <footer class="original-footer">
