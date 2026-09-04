@@ -2,6 +2,55 @@
   const config = window.ALLEY_CATS_REVIEWS;
   const section = document.querySelector("[data-google-reviews]");
 
+  const animateReviewTitle = () => {
+    const title = section?.querySelector("h2");
+    const canAnimate = window.matchMedia(
+      "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+    ).matches;
+    if (!title || !canAnimate) return;
+
+    const label = title.textContent.trim();
+    const fragment = document.createDocumentFragment();
+    let letterIndex = 0;
+
+    label.split(/(\s+)/).forEach((part) => {
+      if (/^\s+$/.test(part)) {
+        fragment.append(document.createTextNode(part));
+        return;
+      }
+
+      const word = document.createElement("span");
+      word.className = "review-title-word";
+      word.setAttribute("aria-hidden", "true");
+
+      [...part].forEach((character) => {
+        const letter = document.createElement("span");
+        letter.className = "review-title-letter";
+        letter.style.setProperty("--letter-index", letterIndex);
+        letter.textContent = character;
+        word.appendChild(letter);
+        letterIndex += 1;
+      });
+
+      fragment.appendChild(word);
+    });
+
+    title.setAttribute("aria-label", label);
+    title.replaceChildren(fragment);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        title.classList.add("is-waving");
+        observer.disconnect();
+      },
+      { threshold: 0.55 },
+    );
+    observer.observe(title);
+  };
+
+  animateReviewTitle();
+
   if (
     !section ||
     !config?.apiKey ||
@@ -13,6 +62,36 @@
   const grid = section.querySelector("[data-review-grid]");
   const summary = section.querySelector("[data-review-summary]");
   const attribution = section.querySelector("[data-review-attribution]");
+
+  const makeCardInteractive = (card, url) => {
+    if (!url || card.dataset.reviewUrl) return;
+
+    card.dataset.reviewUrl = url;
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", "Read the full review on Google Maps");
+
+    const openReview = () => {
+      window.open(url, "_blank", "noopener,noreferrer");
+    };
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      openReview();
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openReview();
+    });
+  };
+
+  section.querySelectorAll(".google-review").forEach((card) => {
+    makeCardInteractive(
+      card,
+      card.querySelector(".google-review-author")?.href || config.reviewsUrl,
+    );
+  });
 
   const loadGoogleMaps = () =>
     new Promise((resolve, reject) => {
@@ -60,6 +139,7 @@
   const createReview = (review) => {
     const card = document.createElement("figure");
     card.className = "google-review";
+    makeCardInteractive(card, review.googleMapsURI || config.reviewsUrl);
 
     const quote = document.createElement("blockquote");
     quote.textContent = `“${review.text}”`;
@@ -72,7 +152,7 @@
     const attribution = review.authorAttribution;
 
     author.className = "google-review-author";
-    author.href = attribution?.uri || review.googleMapsURI || config.reviewsUrl;
+    author.href = review.googleMapsURI || config.reviewsUrl;
     author.target = "_blank";
     author.rel = "noopener noreferrer";
 
@@ -97,16 +177,6 @@
     author.appendChild(authorDetails);
     footer.appendChild(author);
 
-    if (review.googleMapsURI) {
-      const source = document.createElement("a");
-      source.className = "google-review-source";
-      source.href = review.googleMapsURI;
-      source.target = "_blank";
-      source.rel = "noopener noreferrer";
-      source.textContent = "View on Google Maps";
-      footer.appendChild(source);
-    }
-
     card.append(quote, footer);
     return card;
   };
@@ -121,8 +191,16 @@
     });
 
     const reviews = (place.reviews || [])
-      .filter((review) => review.text)
-      .slice(0, 3);
+      .filter((review) => review.text && Number(review.rating) >= 4)
+      .map((review, originalIndex) => ({ review, originalIndex }))
+      .sort(
+        (first, second) =>
+          Number(second.review.rating === 5) -
+            Number(first.review.rating === 5) ||
+          first.originalIndex - second.originalIndex,
+      )
+      .slice(0, 5)
+      .map(({ review }) => review);
     if (!reviews.length) return;
 
     const cards = reviews.map(createReview);

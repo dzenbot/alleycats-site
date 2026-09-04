@@ -151,6 +151,37 @@
   margin: 0 0 27px;
 }
 
+.review-title-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .review-title-letter {
+    display: inline-block;
+  }
+
+  .is-waving .review-title-letter {
+    animation: review-title-wave 720ms cubic-bezier(0.22, 0.75, 0.28, 1)
+      calc(var(--letter-index) * 38ms) 1 both;
+  }
+}
+
+@keyframes review-title-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  38% {
+    transform: translateY(-11px);
+  }
+
+  68% {
+    transform: translateY(4px);
+  }
+}
+
 .original-review-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -214,17 +245,41 @@
 }
 
 .google-review {
+  position: relative;
   display: flex;
   height: 100%;
+  min-height: 390px;
+  overflow: hidden;
+  padding: clamp(25px, 2.4vw, 38px);
   flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 15px 38px rgba(0, 0, 0, 0.12);
+  color: #3f3f3f;
+  cursor: pointer;
   text-align: left;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.google-review:hover,
+.google-review:focus-visible {
+  border-color: rgba(14, 64, 97, 0.55);
+  box-shadow: 0 19px 44px rgba(0, 0, 0, 0.18);
+  outline: none;
+  transform: scale(1.012);
 }
 
 .original-review-grid .google-review blockquote {
   display: -webkit-box;
   overflow: hidden;
-  font-size: clamp(17px, 1.55vw, 22px);
+  color: #454545;
+  font-size: clamp(15px, 1.15vw, 20px);
   line-height: 1.7;
+  overflow-wrap: anywhere;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
 }
@@ -240,7 +295,9 @@
 
 .google-review-author {
   display: flex;
+  width: 100%;
   min-width: 0;
+  overflow: hidden;
   align-items: center;
   gap: 12px;
 }
@@ -260,9 +317,9 @@
 .google-review-avatar {
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
+  background: #ededed;
+  border: 1px solid #ddd;
+  color: #555;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -270,12 +327,14 @@
 
 .google-review-author > span {
   display: grid;
+  flex: 1;
   min-width: 0;
   gap: 3px;
 }
 
 .google-review-author strong {
   overflow: hidden;
+  color: #3f3f3f;
   font-size: 14px;
   font-weight: 400;
   text-overflow: ellipsis;
@@ -283,21 +342,15 @@
 }
 
 .google-review-author small {
-  color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  color: #777;
   font-size: 11px;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .google-review-stars {
   font-size: 11px;
-}
-
-.google-review-source {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 11px;
-  text-align: right;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .google-review-attribution {
@@ -323,7 +376,9 @@
 }
 
 .google-review-attribution small {
-  font-size: 11px;
+  max-width: 760px;
+  font-size: 13px;
+  line-height: 1.55;
   letter-spacing: 0.02em;
 }
 
@@ -541,6 +596,60 @@
     margin-top: 42px;
     flex-direction: column;
     gap: 5px;
+  }
+}
+
+@media (max-width: 699px) {
+  .original-review-grid .google-review:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1299px) {
+  .original-review-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 2.8vw, 36px);
+  }
+
+  .original-review-grid .google-review blockquote {
+    -webkit-line-clamp: 11;
+  }
+
+  .original-review-grid .google-review:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1699px) {
+  .original-review-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(18px, 2.4vw, 38px);
+  }
+
+  .original-review-grid .google-review:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 1700px) {
+  .original-review-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(20px, 1.8vw, 34px);
+  }
+
+  .original-review-grid .google-review {
+    min-height: 430px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .google-review {
+    transition: none;
+  }
+
+  .google-review:hover,
+  .google-review:focus-visible {
+    transform: none;
   }
 }
 
