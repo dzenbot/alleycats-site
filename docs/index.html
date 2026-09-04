@@ -30,8 +30,10 @@
     <link rel="canonical" href="https://alleycatshotel.com/" />
     <title>Premium Cat Boarding in Pitt Meadows, BC — Alley Cats Hotel</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="home.css?v=2" />
     <script src="script.js" defer></script>
+    <script src="reviews-config.js" defer></script>
+    <script src="reviews.js?v=3" defer></script>
   </head>
   <body class="original-home">
     <header class="original-header">
@@ -133,42 +135,105 @@
           </article>
         </div>
       </section>
-      <section class="original-reviews">
+      <section class="original-reviews" data-google-reviews>
         <h2 class="section-title section-title--ornament section-title--light">
           Happy Cats. Happy Parents.
         </h2>
-        <img class="original-stars" src="images/stars.png" alt="Five stars" />
-        <div class="original-review-grid">
-          <figure>
+        <p class="google-review-summary" data-review-summary hidden></p>
+        <div class="original-review-grid" data-review-grid aria-live="polite">
+          <figure class="google-review">
             <blockquote>
               “Friendly staff and excellent care. Our cat spent a few nights
               here while we were away. The place is clean, welcoming, and had a
               ton of cat toys everywhere.”
             </blockquote>
-            <figcaption>— Christeen Young</figcaption>
+            <figcaption>
+              <a
+                class="google-review-author"
+                href="https://www.google.com/search?aqs=chrome.0.0i355i512j46i175i199i512j0i22i30l3j69i60l3.2949j0j7&amp;ie=UTF-8&amp;oq=alley%20cats%20hotel&amp;q=alley%20cats%20hotel&amp;rlz=1C5CHFA_enCA816CA816&amp;sourceid=chrome#lrd=0x5485d5d66e4fc7f7:0xe2e0abb955d29cd,1,,,,1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="google-review-avatar" aria-hidden="true">CY</span>
+                <span>
+                  <strong>Christeen Young</strong>
+                  <small
+                    ><span
+                      class="google-rating-stars google-review-stars"
+                      aria-label="5 out of 5 stars"
+                    ></span>
+                    · Google review</small
+                  >
+                </span>
+              </a>
+            </figcaption>
           </figure>
-          <figure>
+          <figure class="google-review">
             <blockquote>
               “I cannot recommend this cat boarding facility enough! The staff
               here took amazing care of my cats during their three-day stay.”
             </blockquote>
-            <figcaption>— Paulo Henrique</figcaption>
+            <figcaption>
+              <a
+                class="google-review-author"
+                href="https://www.google.com/search?aqs=chrome.0.0i355i512j46i175i199i512j0i22i30l3j69i60l3.2949j0j7&amp;ie=UTF-8&amp;oq=alley%20cats%20hotel&amp;q=alley%20cats%20hotel&amp;rlz=1C5CHFA_enCA816CA816&amp;sourceid=chrome#lrd=0x5485d5d66e4fc7f7:0xe2e0abb955d29cd,1,,,,1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="google-review-avatar" aria-hidden="true">PH</span>
+                <span>
+                  <strong>Paulo Henrique</strong>
+                  <small
+                    ><span
+                      class="google-rating-stars google-review-stars"
+                      aria-label="5 out of 5 stars"
+                    ></span>
+                    · Google review</small
+                  >
+                </span>
+              </a>
+            </figcaption>
           </figure>
-          <figure>
+          <figure class="google-review">
             <blockquote>
               “First time boarding my cats. I was really impressed with the
               whole process. Check in was easy. The cats’ room was quite
               spacious and full of perches and toys.”
             </blockquote>
-            <figcaption>— Stephanie P</figcaption>
+            <figcaption>
+              <a
+                class="google-review-author"
+                href="https://www.google.com/search?aqs=chrome.0.0i355i512j46i175i199i512j0i22i30l3j69i60l3.2949j0j7&amp;ie=UTF-8&amp;oq=alley%20cats%20hotel&amp;q=alley%20cats%20hotel&amp;rlz=1C5CHFA_enCA816CA816&amp;sourceid=chrome#lrd=0x5485d5d66e4fc7f7:0xe2e0abb955d29cd,1,,,,1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="google-review-avatar" aria-hidden="true">SP</span>
+                <span>
+                  <strong>Stephanie P</strong>
+                  <small
+                    ><span
+                      class="google-rating-stars google-review-stars"
+                      aria-label="5 out of 5 stars"
+                    ></span>
+                    · Google review</small
+                  >
+                </span>
+              </a>
+            </figcaption>
           </figure>
+        </div>
+        <div class="google-review-attribution" data-review-attribution>
+          <span translate="no">Google Maps</span>
+          <small
+            >Reviews are selected and ordered by Google for relevance.</small
+          >
         </div>
         <a
           class="original-outline light"
           href="https://www.google.com/search?aqs=chrome.0.0i355i512j46i175i199i512j0i22i30l3j69i60l3.2949j0j7&amp;ie=UTF-8&amp;oq=alley%20cats%20hotel&amp;q=alley%20cats%20hotel&amp;rlz=1C5CHFA_enCA816CA816&amp;sourceid=chrome#lrd=0x5485d5d66e4fc7f7:0xe2e0abb955d29cd,1,,,,1"
           target="_blank"
           rel="noopener noreferrer"
-          >Read More Reviews</a
+          >Read More Google Reviews</a
         >
       </section>
       <section class="original-start">
