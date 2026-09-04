@@ -214,10 +214,6 @@
   margin-bottom: 12px;
 }
 
-.original-start a:not(.original-button) {
-  text-decoration: underline;
-}
-
 .original-start-inner > p:last-of-type {
   color: #686868;
 }

@@ -491,7 +491,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--navy);
+  color: var(--gold);
 }
 
 .footer-brand p {
@@ -1088,16 +1088,6 @@ details div {
   color: #686868;
 }
 
-.original-footer a[href^="mailto:"],
-.original-footer a[href^="tel:"] {
-  text-decoration: none;
-}
-
-.original-footer a[href^="mailto:"]:hover,
-.original-footer a[href^="tel:"]:hover {
-  text-decoration: underline;
-}
-
 .original-copyright {
   text-align: center;
   color: #888;
@@ -1418,8 +1408,26 @@ p.hero-description {
   font-size: 19px;
 }
 
+/* Consistent inline links in page copy and footers. */
+:where(main p, main li, .original-footer)
+  a:not(.original-button):not(.original-outline):not(.about-text-link) {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition:
+    color 240ms ease,
+    text-decoration-color 240ms ease;
+}
+
+:where(main p, main li, .original-footer)
+  a:not(.original-button):not(.original-outline):not(.about-text-link):hover {
+  color: var(--gold);
+  text-decoration-color: currentColor;
+}
+
 /* Shared ornamental section headings. */
-.replica-page .section-title {
+.section-title {
   margin-top: 0;
   color: var(--navy);
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -1430,15 +1438,15 @@ p.hero-description {
   text-align: center;
 }
 
-.replica-page .section-title--ornament::after {
+.section-title--ornament::after {
   display: block;
   width: 130px;
   height: 20px;
   margin: 15px auto 0;
   background:
-    linear-gradient(var(--navy), var(--navy)) left center / 48px 1px no-repeat,
-    linear-gradient(var(--navy), var(--navy)) right center / 48px 1px no-repeat;
-  color: var(--navy);
+    linear-gradient(currentColor, currentColor) left center / 48px 1px no-repeat,
+    linear-gradient(currentColor, currentColor) right center / 48px 1px
+      no-repeat;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
   font-weight: 400;
@@ -1447,16 +1455,16 @@ p.hero-description {
   content: "✦";
 }
 
-.replica-page .section-title--light {
+.section-title--light {
   color: #fff;
 }
 
-.replica-page .section-title--left {
+.section-title--left {
   text-align: left;
 }
 
 @media (max-width: 767px) {
-  .replica-page .section-title {
+  .section-title {
     font-size: 40px;
   }
 }

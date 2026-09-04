@@ -155,9 +155,6 @@
 .guidelines-intro-copy a {
   color: #fff;
   font-weight: 400;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
 }
 
 .guidelines-search label {
@@ -365,9 +362,6 @@
 
 .faq-answer a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
   font-weight: 400;
 }
 

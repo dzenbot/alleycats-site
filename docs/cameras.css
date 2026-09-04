@@ -74,8 +74,6 @@
 
 .camera-step-copy a {
   color: var(--navy);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .camera-step-note {
@@ -189,8 +187,6 @@
 
 .camera-support a {
   color: var(--navy);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 @media (max-width: 767px) {

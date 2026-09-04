@@ -140,8 +140,6 @@
 .about-reviews a,
 .join-replica a {
   color: #0e4061;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .join-replica {
