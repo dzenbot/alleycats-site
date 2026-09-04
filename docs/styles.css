@@ -1108,14 +1108,16 @@ details div {
 }
 
 .original-hero > img,
-.replica-hero > img {
+.replica-hero > img,
+[data-parallax] {
   transform: translate3d(0, var(--parallax-offset, 0px), 0) scale(1.08);
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .original-hero > img,
-  .replica-hero > img {
+  .replica-hero > img,
+  [data-parallax] {
     transform: none;
     will-change: auto;
   }

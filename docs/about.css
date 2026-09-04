@@ -142,6 +142,20 @@
   color: #0e4061;
 }
 
+.about-landscape {
+  width: 100%;
+  height: clamp(260px, 27vw, 390px);
+  margin: 0;
+  overflow: hidden;
+}
+
+.about-landscape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .join-replica {
   display: grid;
   min-height: 420px;
@@ -164,6 +178,10 @@
 }
 
 @media (max-width: 1180px) {
+  .about-landscape {
+    display: none;
+  }
+
   .about-intro {
     height: min(650px, calc(100svh - 100px));
     min-height: 540px;

@@ -56,7 +56,9 @@ document
   .forEach((el) => (el.textContent = new Date().getFullYear()));
 
 const parallaxImages = [
-  ...document.querySelectorAll(".original-hero>img,.replica-hero>img"),
+  ...document.querySelectorAll(
+    ".original-hero>img,.replica-hero>img,[data-parallax]",
+  ),
 ];
 if (
   parallaxImages.length &&
