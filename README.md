@@ -1,3 +1,3 @@
-# Alley Cats Hotel's static website
+# Alley Cats Hotel Website
 
-A lightweight, responsive, using plain HTML, CSS and JavaScript.
+![website screenshot](img/site-screenshot.jpg)
