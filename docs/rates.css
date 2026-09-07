@@ -200,7 +200,7 @@ html {
 }
 .rate-card-heading {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 18px;
 }
@@ -219,7 +219,7 @@ html {
 .rate-card-capacity {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   margin: 5px 0 0;
   color: #718087;
   font-size: 14px;
@@ -227,9 +227,14 @@ html {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.rate-card-capacity img {
-  width: 19px;
-  height: 19px;
+.capacity-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.capacity-icons img {
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 .rate-card-price {
@@ -273,7 +278,7 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  margin: 9px 0 0;
+  margin: 15px 0 0;
   padding-top: 15px;
   border-top: 1px solid #e2e5e4;
   color: #718087;
