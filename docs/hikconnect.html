@@ -8,30 +8,26 @@
     />
     <meta name="robots" content="noindex" />
     <title>Opening Hik-Connect — Alley Cats Hotel</title>
-    <script>
-      (() => {
-        const mobileAppUrl = "https://appstore.hikvision.com/0yGe";
-        const userAgent = navigator.userAgent || "";
-        const platform =
-          navigator.userAgentData?.platform || navigator.platform || "";
-        const isAndroid = /Android/i.test(userAgent);
-        const isIOS =
-          /iPhone|iPad|iPod/i.test(userAgent) ||
-          (/Mac/i.test(platform) && navigator.maxTouchPoints > 1);
-
-        if (isIOS || isAndroid) {
-          window.location.replace(mobileAppUrl);
-          return;
-        }
-
-        window.location.replace("index.html");
-      })();
-    </script>
   </head>
   <body>
     <p>
       Opening Hik-Connect…
-      <a href="index.html">Return to Alley Cats Hotel</a>
+      <a href="#" data-redirect-link>Continue</a>
     </p>
+    <script>
+      const mobileAppUrl = "https://appstore.hikvision.com/0yGe";
+      const desktopUrl = "index.html";
+      const userAgent = navigator.userAgent || "";
+      const platform =
+        navigator.userAgentData?.platform || navigator.platform || "";
+      const isAndroid = /Android/i.test(userAgent);
+      const isIOS =
+        /iPhone|iPad|iPod/i.test(userAgent) ||
+        (/Mac/i.test(platform) && navigator.maxTouchPoints > 1);
+      const redirectUrl = isIOS || isAndroid ? mobileAppUrl : desktopUrl;
+
+      document.querySelector("[data-redirect-link]").href = redirectUrl;
+      window.location.replace(redirectUrl);
+    </script>
   </body>
 </html>

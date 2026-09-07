@@ -7,19 +7,18 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <meta name="robots" content="noindex" />
-    <meta
-      http-equiv="refresh"
-      content="0; url=https://forms.gle/AA1iyQsqArnU33w27"
-    />
     <title>Opening Guest Onboarding — Alley Cats Hotel</title>
-    <script>
-      window.location.replace("https://forms.gle/AA1iyQsqArnU33w27");
-    </script>
   </head>
   <body>
     <p>
       Opening the Alley Cats Hotel onboarding form…
-      <a href="https://forms.gle/AA1iyQsqArnU33w27">Continue to the form</a>
+      <a href="#" data-redirect-link>Continue to the form</a>
     </p>
+    <script>
+      const onboardingUrl = "https://forms.gle/AA1iyQsqArnU33w27";
+
+      document.querySelector("[data-redirect-link]").href = onboardingUrl;
+      window.location.replace(onboardingUrl);
+    </script>
   </body>
 </html>

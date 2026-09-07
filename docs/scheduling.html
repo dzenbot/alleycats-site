@@ -7,19 +7,18 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <meta name="robots" content="noindex" />
-    <meta
-      http-equiv="refresh"
-      content="0; url=https://forms.gle/H81t58M794b9Vf7j6"
-    />
     <title>Opening Scheduling Form — Alley Cats Hotel</title>
-    <script>
-      window.location.replace("https://forms.gle/H81t58M794b9Vf7j6");
-    </script>
   </head>
   <body>
     <p>
       Opening the Alley Cats Hotel scheduling form…
-      <a href="https://forms.gle/H81t58M794b9Vf7j6">Continue to the form</a>
+      <a href="#" data-redirect-link>Continue to the form</a>
     </p>
+    <script>
+      const schedulingUrl = "https://forms.gle/H81t58M794b9Vf7j6";
+
+      document.querySelector("[data-redirect-link]").href = schedulingUrl;
+      window.location.replace(schedulingUrl);
+    </script>
   </body>
 </html>
