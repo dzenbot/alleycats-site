@@ -204,14 +204,33 @@ html {
   justify-content: space-between;
   gap: 18px;
 }
+.rate-card-title {
+  min-width: 0;
+}
 .rate-card-heading h3 {
   margin: 0;
-  color: #172f3d;
+  color: var(--navy);
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(25px, 2vw, 31px);
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.035em;
+}
+.rate-card-capacity {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 5px 0 0;
+  color: #718087;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.rate-card-capacity img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
 }
 .rate-card-price {
   display: grid;
