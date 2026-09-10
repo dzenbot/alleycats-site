@@ -285,6 +285,12 @@ html {
   font-size: 15px;
   line-height: 1.4;
 }
+.rate-card-meta > span:last-child {
+  color: var(--navy);
+}
+.rate-card-meta .extra-cat-price {
+  font-weight: 500;
+}
 
 .services-replica {
   min-height: 0;
