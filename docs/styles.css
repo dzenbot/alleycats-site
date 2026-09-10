@@ -878,12 +878,6 @@ details div {
   margin: 0;
 }
 
-.original-social {
-  display: flex;
-  gap: 15px;
-  font-size: 25px;
-}
-
 .original-copyright {
   grid-column: 1/-1;
   align-self: end;
@@ -1061,10 +1055,6 @@ details div {
   right: 0;
   background: #fff;
   border-bottom: 1px solid #e6e6e6;
-}
-
-.original-social {
-  display: none;
 }
 
 @media (min-width: 768px) {
