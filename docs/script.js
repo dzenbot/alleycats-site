@@ -1,7 +1,21 @@
 const menuButton = document.querySelector(".menu");
 const nav = document.querySelector("header nav");
 if (menuButton && nav) {
+  let menuCloseTimer;
+
   const setMenuState = (open) => {
+    const wasOpen = nav.classList.contains("open");
+
+    window.clearTimeout(menuCloseTimer);
+    nav.classList.remove("is-closing");
+
+    if (!open && wasOpen) {
+      nav.classList.add("is-closing");
+      menuCloseTimer = window.setTimeout(() => {
+        nav.classList.remove("is-closing");
+      }, 280);
+    }
+
     nav.classList.toggle("open", open);
     document.body.classList.toggle("menu-open", open);
     menuButton.setAttribute("aria-expanded", String(open));

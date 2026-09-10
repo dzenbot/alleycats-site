@@ -1305,9 +1305,7 @@ details div {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition:
-      opacity 280ms ease,
-      visibility 0s linear 280ms;
+    transition: none;
   }
 
   .original-header nav.open {
@@ -1315,7 +1313,14 @@ details div {
     display: flex;
     opacity: 1;
     pointer-events: auto;
-    transition-delay: 0s;
+    transition: opacity 280ms ease;
+  }
+
+  .original-header nav.is-closing {
+    visibility: visible;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 280ms ease;
   }
 
   .original-header nav > a,
@@ -1326,16 +1331,25 @@ details div {
     left: auto !important;
     opacity: 0;
     transform: translateY(12px) !important;
-    transition:
-      color 280ms ease,
-      opacity 280ms ease,
-      transform 280ms ease;
+    transition: color 280ms ease;
   }
 
   .original-header nav.open > a,
   .original-header nav.open > .original-button {
     opacity: 1;
     transform: translateY(0) !important;
+    transition:
+      color 280ms ease,
+      opacity 280ms ease,
+      transform 280ms ease;
+  }
+
+  .original-header nav.is-closing > a,
+  .original-header nav.is-closing > .original-button {
+    transition:
+      color 280ms ease,
+      opacity 280ms ease,
+      transform 280ms ease;
   }
 
   .original-header nav > a:not(.original-button) {
