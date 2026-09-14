@@ -53,28 +53,39 @@ document.addEventListener(
 );
 document.addEventListener("dblclick", preventPageZoom, { passive: false });
 
+const cleanUrlPages = new Set([
+  "index.html",
+  "rates.html",
+  "guidelines.html",
+  "about.html",
+  "cameras.html",
+]);
+const requestedFile = window.location.pathname.split("/").pop();
+
 if (
   /^https?:$/.test(window.location.protocol) &&
-  window.location.pathname.endsWith("/index.html")
+  cleanUrlPages.has(requestedFile)
 ) {
-  const homePath = window.location.pathname.slice(0, -"index.html".length);
+  const cleanPath = window.location.pathname.slice(0, -requestedFile.length);
+  const pagePath = requestedFile === "index.html" ? "" : requestedFile.slice(0, -5);
   window.history.replaceState(
     null,
     "",
-    `${homePath}${window.location.search}${window.location.hash}`,
+    `${cleanPath}${pagePath}${window.location.search}${window.location.hash}`,
   );
 }
 
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const currentPage = window.location.pathname.split("/").pop() || "index";
 document
-  .querySelectorAll('.original-header nav a[href$=".html"]')
+  .querySelectorAll(".original-header nav a:not(.original-button)")
   .forEach((link) => {
     const linkPage = new URL(link.href, window.location.href).pathname
       .split("/")
-      .pop();
+      .pop()
+      .replace(/\.html$/, "");
     link.classList.toggle(
       "is-current",
-      currentPage !== "index.html" && linkPage === currentPage,
+      currentPage !== "index" && linkPage === currentPage,
     );
   });
 document
