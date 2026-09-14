@@ -31,7 +31,7 @@
 
     const logo = document.querySelector(".original-logo img");
     if (logo) {
-      logo.src = theme === "dark" ? "images/logo-lite.png" : "images/logo.png";
+      logo.src = theme === "dark" ? "img/logo-lite.png" : "img/logo.png";
     }
 
     const toggle = document.querySelector("[data-theme-toggle]");

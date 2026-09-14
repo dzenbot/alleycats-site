@@ -8,7 +8,7 @@ const showCameraMessage = (message) => {
   cameraCredentials.appendChild(paragraph);
 };
 
-fetch("camera-credentials.json")
+fetch("data/camera-credentials.json")
   .then((response) => {
     if (!response.ok) throw new Error("Camera details could not be loaded");
     return response.json();

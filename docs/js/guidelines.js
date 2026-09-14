@@ -46,7 +46,7 @@ function appendLinkifiedText(element, text) {
   element.appendChild(document.createTextNode(text.slice(cursor)));
 }
 
-fetch("guidelines.json")
+fetch("data/guidelines.json")
   .then((response) => {
     if (!response.ok) throw new Error("FAQ data could not be loaded");
     return response.json();

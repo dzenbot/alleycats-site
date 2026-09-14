@@ -170,7 +170,7 @@ html[data-theme="dark"] .theme-toggle:hover {
 }
 
 html[data-theme="dark"] .original-logo img {
-  content: url("images/logo-lite.png");
+  content: url("../img/logo-lite.png");
 }
 
 html[data-theme="dark"] .original-footer a,
