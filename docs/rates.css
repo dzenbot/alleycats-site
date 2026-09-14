@@ -23,6 +23,7 @@ html {
   align-items: center;
   justify-content: center;
   padding: var(--section-space) 8vw;
+  background: #faf6ec;
   text-align: center;
 }
 .rates-intro h3 {

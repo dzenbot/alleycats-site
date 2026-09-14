@@ -131,12 +131,18 @@
   background: #fff;
   color: #0e4061;
   margin-top: 66px;
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease,
+    scale 0.28s ease;
 }
 
 .original-outline.light:hover {
   border-color: #fff;
   background: #0e4061;
   color: #fff;
+  scale: 1.025;
 }
 
 .original-reviews {
@@ -145,6 +151,13 @@
   color: #fff;
   text-align: center;
   padding: 82px 6vw 65px;
+}
+
+.original-reviews .section-title--ornament::after {
+  background:
+    linear-gradient(#e8b529, #e8b529) left center / 48px 1px no-repeat,
+    linear-gradient(#e8b529, #e8b529) right center / 48px 1px no-repeat;
+  color: #e8b529;
 }
 
 .original-reviews h2 {
@@ -236,7 +249,7 @@
   inset: 0 auto 0 0;
   width: var(--rating-percent);
   overflow: hidden;
-  color: #fdbd12;
+  color: #e8b529;
   content: "★★★★★";
 }
 
@@ -655,15 +668,38 @@
 
 /* Get Started step-by-step flow. */
 .original-start-inner {
-  width: min(920px, 100%);
+  width: min(1040px, 100%);
+  padding: clamp(38px, 5vw, 64px);
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(30, 42, 49, 0.08);
 }
 
 .original-start ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: 0 36px;
   counter-reset: booking-step;
   list-style: none;
   margin: 42px 0 36px;
   padding: 0;
   border-top: 1px solid rgba(14, 64, 97, 0.2);
+}
+
+.original-start li:nth-child(1) {
+  grid-area: 1 / 1;
+}
+
+.original-start li:nth-child(2) {
+  grid-area: 2 / 1;
+}
+
+.original-start li:nth-child(3) {
+  grid-area: 1 / 2;
+}
+
+.original-start li:nth-child(4) {
+  grid-area: 2 / 2;
 }
 
 .original-start li {
@@ -672,6 +708,7 @@
   grid-template-columns: 46px 1fr;
   gap: 22px;
   align-items: center;
+  min-height: 112px;
   margin: 0;
   padding: 22px 4px;
   border-bottom: 1px solid rgba(14, 64, 97, 0.2);
@@ -706,11 +743,26 @@
 }
 
 @media (max-width: 767px) {
+  .original-start {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .original-start-inner {
+    padding: 54px 8vw 58px;
+    box-shadow: none;
+  }
+
   .original-start ol {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 0;
     margin-top: 34px;
   }
 
-  .original-start li {
+  .original-start li:nth-child(n) {
+    grid-area: auto;
+    min-height: 0;
     grid-template-columns: 40px 1fr;
     gap: 16px;
     padding: 20px 0;
@@ -766,19 +818,17 @@
   height: 100%;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(14, 64, 97, 0.14);
+  border: 0;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 22px rgba(30, 42, 49, 0.055);
   text-align: left;
   transition:
-    border-color 0.35s ease,
     box-shadow 0.35s ease;
 }
 
 .original-home a.original-room-card:hover {
   color: inherit;
-  border-color: rgba(14, 64, 97, 0.35);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 28px rgba(30, 42, 49, 0.09);
 }
 
 .original-room-card:focus-visible {
@@ -824,7 +874,7 @@
   min-height: 220px;
   flex: 1;
   padding: 27px 25px 24px;
-  border-top: 3px solid #0e4061;
+  border-top: 0;
 }
 
 .original-room-copy h3 {
@@ -891,6 +941,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .original-outline.light {
+    transition: none;
+  }
+
+  .original-outline.light:hover {
+    scale: 1;
+  }
+
   .original-room-card,
   .original-room-image img,
   .original-room-image::after,

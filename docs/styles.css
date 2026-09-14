@@ -1,7 +1,7 @@
 :root {
   --navy: #0b3f5b;
   --deep: #073149;
-  --gold: #e8b529;
+  --gold: #ff7f3e;
   --ink: #17313e;
   --copy-dark: #242424;
   --cream: #f5f2ea;
@@ -1094,7 +1094,7 @@ details div {
 .original-home
   a:not(.original-button):not(.original-outline):not(.original-room-card):hover,
 .replica-page a:not(.original-button):hover {
-  color: #fdbd12;
+  color: var(--gold);
 }
 
 .original-hero > img,
@@ -1164,7 +1164,7 @@ details div {
   right: 0;
   bottom: -6px;
   height: 1px;
-  background: #0e4061;
+  background: var(--gold);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.28s ease;
@@ -1198,8 +1198,8 @@ details div {
 }
 
 .original-logo:hover img {
-  opacity: 0.58;
-  scale: 1.025;
+  opacity: 1;
+  scale: 0.985;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1450,9 +1450,9 @@ p.hero-description {
   height: 20px;
   margin: 15px auto 0;
   background:
-    linear-gradient(currentColor, currentColor) left center / 48px 1px no-repeat,
-    linear-gradient(currentColor, currentColor) right center / 48px 1px
-      no-repeat;
+    linear-gradient(var(--navy), var(--navy)) left center / 48px 1px no-repeat,
+    linear-gradient(var(--navy), var(--navy)) right center / 48px 1px no-repeat;
+  color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
   font-weight: 400;

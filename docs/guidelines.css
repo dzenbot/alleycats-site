@@ -500,3 +500,97 @@
     max-width: 100%;
   }
 }
+
+/* Light-mode foundation; dark-mode.css restores the navy treatment. */
+.faq-page {
+  background: #faf6ec;
+  color: var(--copy-dark);
+}
+
+.faq-page h1,
+.faq-question {
+  color: var(--navy);
+}
+
+.guidelines-title-ornament {
+  color: var(--navy);
+}
+
+.guidelines-title-ornament::before,
+.guidelines-title-ornament::after {
+  background: var(--navy);
+}
+
+.guidelines-intro-copy {
+  color: #526b77;
+}
+
+.guidelines-intro-copy a,
+.faq-answer a {
+  color: var(--navy);
+}
+
+.guidelines-search label,
+.guidelines-search-status,
+.guidelines-empty {
+  color: #657780;
+}
+
+.guidelines-search-field svg {
+  stroke: rgba(11, 63, 91, 0.72);
+}
+
+.guidelines-search input {
+  border-color: rgba(11, 63, 91, 0.35);
+  background: #fff;
+  color: var(--copy-dark);
+}
+
+.guidelines-search input::placeholder {
+  color: #98a3a8;
+}
+
+.guidelines-search input:focus {
+  border-color: var(--navy);
+  background: #fff;
+}
+
+.guidelines-search-clear {
+  color: var(--navy);
+}
+
+.faq-item:not(:first-child)::before {
+  background: rgba(11, 63, 91, 0.24);
+}
+
+.faq-answer-inner {
+  color: #454545;
+}
+
+.faq-question:focus-visible {
+  outline-color: var(--navy);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq-question:hover {
+    background: rgba(11, 63, 91, 0.06);
+  }
+}
+
+.guidelines-results-clear {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff !important;
+}
+
+.guidelines-results-clear:hover {
+  border-color: var(--navy);
+  background: #fff;
+  color: var(--navy) !important;
+}
+
+@media (max-width: 767px) {
+  .faq-question:active {
+    background: rgba(11, 63, 91, 0.06);
+  }
+}
