@@ -53,6 +53,18 @@ document.addEventListener(
 );
 document.addEventListener("dblclick", preventPageZoom, { passive: false });
 
+if (
+  /^https?:$/.test(window.location.protocol) &&
+  window.location.pathname.endsWith("/index.html")
+) {
+  const homePath = window.location.pathname.slice(0, -"index.html".length);
+  window.history.replaceState(
+    null,
+    "",
+    `${homePath}${window.location.search}${window.location.hash}`,
+  );
+}
+
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 document
   .querySelectorAll('.original-header nav a[href$=".html"]')
