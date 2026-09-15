@@ -298,6 +298,10 @@ html[data-theme="dark"] .services-replica {
   background: var(--navy);
 }
 
+html[data-theme="dark"] .room-catalog {
+  background: var(--deep);
+}
+
 html[data-theme="dark"] .rate-card-capacity,
 html[data-theme="dark"] .rate-card-price small,
 html[data-theme="dark"] .rate-card-meta,
