@@ -412,6 +412,39 @@ html[data-theme="dark"] .camera-credentials strong {
   color: #fff !important;
 }
 
+/* New customers */
+html[data-theme="dark"] .new-customer-main {
+  background: var(--navy);
+}
+
+html[data-theme="dark"] .new-customer-eyebrow,
+html[data-theme="dark"] .new-customer-intro h1,
+html[data-theme="dark"] .adjustment-grid h2,
+html[data-theme="dark"] .closing-note h2 {
+  color: #fff;
+}
+
+html[data-theme="dark"] .new-customer-intro > p:last-child,
+html[data-theme="dark"] .adjustment-grid p,
+html[data-theme="dark"] .closing-note p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+html[data-theme="dark"] .adjustment-grid > li {
+  border-color: rgba(255, 255, 255, 0.13);
+  background: var(--deep);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .closing-note {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="dark"] .adjustment-grid > li:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
 /* Guidelines */
 html[data-theme="dark"] .faq-page {
   background: var(--navy);
