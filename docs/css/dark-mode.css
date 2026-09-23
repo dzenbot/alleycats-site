@@ -116,11 +116,6 @@ html[data-theme="dark"] .theme-icon-sun {
   }
 }
 
-/* Dark palette */
-html[data-theme="dark"] {
-  --gold: #e8b529;
-}
-
 html[data-theme="dark"] body,
 html[data-theme="dark"] .original-home,
 html[data-theme="dark"] .replica-page {
@@ -130,15 +125,10 @@ html[data-theme="dark"] .replica-page {
 
 html[data-theme="dark"] .original-header,
 html[data-theme="dark"] .replica-page .original-header,
-html[data-theme="dark"] .original-header nav,
-html[data-theme="dark"] .original-footer {
+html[data-theme="dark"] .original-header nav {
   border-color: rgba(255, 255, 255, 0.16);
   background: var(--navy);
   color: rgba(255, 255, 255, 0.86);
-}
-
-html[data-theme="dark"] .original-footer {
-  background: var(--deep);
 }
 
 html[data-theme="dark"] .original-header nav > a:not(.original-button) {
@@ -179,19 +169,6 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 html[data-theme="dark"] .original-logo img {
   content: url("../img/logo-lite.png");
-}
-
-html[data-theme="dark"] .original-footer a,
-html[data-theme="dark"] .original-footer p {
-  color: #fff;
-}
-
-html[data-theme="dark"] .original-footer h3 {
-  color: rgba(255, 255, 255, 0.58);
-}
-
-html[data-theme="dark"] .original-copyright {
-  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 html[data-theme="dark"] .section-title,
