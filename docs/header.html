@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <script>
+      try {
+        const saved = localStorage.getItem("alley-cats-theme");
+        const theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      } catch {}
+    </script>
+    <link rel="stylesheet" href="css/header.css" />
+    <script src="js/header.js" defer></script>
+    <title>Alley Cats Hotel navigation</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="./" target="_parent" class="site-logo">
+        <img src="img/logo.png" alt="Alley Cats Hotel" />
+      </a>
+      <button
+        class="menu"
+        type="button"
+        aria-expanded="false"
+        aria-label="Open menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <a href="rates.html" target="_parent">Rates</a>
+        <a href="guidelines.html" target="_parent">Guidelines</a>
+        <a href="about.html" target="_parent">About Us</a>
+        <a class="book-button" href="book.html" target="_parent">Book Now</a>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <svg
+            class="theme-icon theme-icon-moon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"
+            ></path>
+          </svg>
+          <svg
+            class="theme-icon theme-icon-sun"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="3.75"></circle>
+            <path
+              d="M12 2v2.25M12 19.75V22M4.93 4.93l1.59 1.59M17.48 17.48l1.59 1.59M2 12h2.25M19.75 12H22M4.93 19.07l1.59-1.59M17.48 6.52l1.59-1.59"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+  </body>
+</html>

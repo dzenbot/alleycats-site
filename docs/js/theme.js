@@ -64,34 +64,14 @@
     }
   });
 
+  window.addEventListener("storage", (event) => {
+    if (event.key !== storageKey) return;
+    const updatedTheme = readSavedTheme();
+    hasExplicitTheme = updatedTheme !== null;
+    applyTheme(updatedTheme || preferredTheme());
+  });
+
   window.addEventListener("DOMContentLoaded", () => {
-    const bookButton = document.querySelector(
-      ".original-header nav > .original-button",
-    );
-
-    if (bookButton && !document.querySelector("[data-theme-toggle]")) {
-      const toggle = document.createElement("button");
-      toggle.className = "theme-toggle";
-      toggle.type = "button";
-      toggle.dataset.themeToggle = "";
-      toggle.innerHTML = `
-        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path>
-        </svg>
-        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="3.75"></circle>
-          <path d="M12 2v2.25M12 19.75V22M4.93 4.93l1.59 1.59M17.48 17.48l1.59 1.59M2 12h2.25M19.75 12H22M4.93 19.07l1.59-1.59M17.48 6.52l1.59-1.59"></path>
-        </svg>`;
-      bookButton.insertAdjacentElement("afterend", toggle);
-
-      toggle.addEventListener("click", () => {
-        const nextTheme =
-          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-        hasExplicitTheme = true;
-        applyTheme(nextTheme, true);
-      });
-    }
-
     applyTheme(document.documentElement.dataset.theme || initialTheme);
   });
 })();

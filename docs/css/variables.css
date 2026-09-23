@@ -1,0 +1,17 @@
+:root {
+  --navy: #0b3f5b;
+  --deep: #073149;
+  --gold: #ff7f3e;
+  --ink: #17313e;
+  --copy-dark: #242424;
+  --cream: #f5f2ea;
+  --white: #fff;
+  --line: #d9dedf;
+  --pad: clamp(1.3rem, 5vw, 5rem);
+  --section-space: 90px;
+  --section-space-mobile: 65px;
+}
+
+html[data-theme="dark"] {
+  --gold: #e8b529;
+}

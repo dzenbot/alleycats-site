@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="robots" content="noindex" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("alley-cats-theme");
+          document.documentElement.dataset.theme =
+            savedTheme === "dark" || savedTheme === "light"
+              ? savedTheme
+              : matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+        } catch {
+          document.documentElement.dataset.theme = matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches
+            ? "dark"
+            : "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>Alley Cats Hotel Footer</title>
+  </head>
+  <body>
+    <footer class="site-footer">
+      <div>
+        <h2>Location</h2>
+        <a
+          href="https://maps.app.goo.gl/HDhQfXdjt5mjZy7t5"
+          target="_blank"
+          rel="noopener noreferrer"
+          >19822 McNeil Road<br />Pitt Meadows, BC</a
+        >
+      </div>
+      <div>
+        <h2>Public Hours</h2>
+        <p>Monday to Sunday<br />10:00 AM - 6:00 PM</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:contact@alleycatshotel.com"
+          >contact@alleycatshotel.com</a
+        >
+        <a href="tel:+16044572287">(604) 457-2287</a>
+      </div>
+      <p class="site-footer-copyright">
+        <span data-year></span> © Alley Cats Hotel
+      </p>
+    </footer>
+
+    <script>
+      (() => {
+        const storageKey = "alley-cats-theme";
+        const preference = matchMedia("(prefers-color-scheme: dark)");
+        const applyTheme = (theme) => {
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        };
+        const savedTheme = () => {
+          try {
+            const theme = localStorage.getItem(storageKey);
+            return theme === "dark" || theme === "light" ? theme : null;
+          } catch {
+            return null;
+          }
+        };
+
+        document.querySelector("[data-year]").textContent =
+          new Date().getFullYear();
+        applyTheme(savedTheme() || (preference.matches ? "dark" : "light"));
+
+        addEventListener("storage", (event) => {
+          if (event.key === storageKey) {
+            applyTheme(savedTheme() || (preference.matches ? "dark" : "light"));
+          }
+        });
+        preference.addEventListener("change", (event) => {
+          if (!savedTheme()) applyTheme(event.matches ? "dark" : "light");
+        });
+      })();
+    </script>
+  </body>
+</html>
