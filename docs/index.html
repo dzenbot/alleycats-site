@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="css/dark-mode.css" />
     <script src="js/script.js" defer></script>
     <script src="data/reviews-config.js" defer></script>
-    <script src="js/reviews.js?v=7" defer></script>
+    <script src="js/reviews.js?v=8" defer></script>
   </head>
   <body class="original-home">
     <header class="original-header">
@@ -162,12 +162,21 @@
           </article>
         </div>
       </section>
-      <section class="original-reviews" data-google-reviews>
+      <section class="original-reviews is-loading" data-google-reviews>
         <h2 class="section-title section-title--ornament section-title--light">
           Happy Cats. Happy Parents.
         </h2>
         <p class="google-review-summary" data-review-summary hidden></p>
-        <div class="original-review-grid" data-review-grid aria-live="polite">
+        <div
+          class="original-review-grid review-count-3"
+          data-review-grid
+          aria-live="polite"
+          aria-busy="true"
+        >
+          <div class="google-reviews-loading" data-review-loading role="status">
+            <span aria-hidden="true"></span>
+            <p>Loading Google reviews…</p>
+          </div>
           <figure class="google-review">
             <blockquote>
               “Friendly staff and excellent care. Our cat spent a few nights

@@ -51,17 +51,35 @@
 
   animateReviewTitle();
 
+  const grid = section?.querySelector("[data-review-grid]");
+  const summary = section?.querySelector("[data-review-summary]");
+  const attribution = section?.querySelector("[data-review-attribution]");
+
+  const setReviewCount = (count) => {
+    if (!grid) return;
+    [...grid.classList]
+      .filter((className) => className.startsWith("review-count-"))
+      .forEach((className) => grid.classList.remove(className));
+    grid.classList.add(`review-count-${Math.max(1, Math.min(5, count))}`);
+  };
+
+  const showFallbackReviews = () => {
+    if (!section || !grid) return;
+    section.classList.remove("is-loading");
+    section.classList.add("has-fallback-reviews");
+    grid.querySelector("[data-review-loading]")?.remove();
+    grid.setAttribute("aria-busy", "false");
+    setReviewCount(grid.querySelectorAll(".google-review").length);
+  };
+
   if (
     !section ||
     !config?.apiKey ||
     config.apiKey === "ADD_RESTRICTED_GOOGLE_MAPS_API_KEY"
   ) {
+    showFallbackReviews();
     return;
   }
-
-  const grid = section.querySelector("[data-review-grid]");
-  const summary = section.querySelector("[data-review-summary]");
-  const attribution = section.querySelector("[data-review-attribution]");
 
   const makeCardInteractive = (card, url) => {
     if (!url || card.dataset.reviewUrl) return;
@@ -201,10 +219,15 @@
       )
       .slice(0, 5)
       .map(({ review }) => review);
-    if (!reviews.length) return;
+    if (!reviews.length) {
+      throw new Error("No eligible Google reviews were returned.");
+    }
 
     const cards = reviews.map(createReview);
     grid.replaceChildren(...cards);
+    setReviewCount(cards.length);
+    grid.setAttribute("aria-busy", "false");
+    section.classList.remove("is-loading");
     section.classList.add("has-live-reviews");
 
     if (place.rating) {
@@ -224,6 +247,7 @@
   };
 
   showReviews().catch((error) => {
+    showFallbackReviews();
     console.warn(
       "Live Google reviews were unavailable; showing fallback reviews.",
       error,
