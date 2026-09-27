@@ -32,7 +32,6 @@
 .original-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(22, 31, 37, 0.48);
 }
 
 .original-hero-copy {
@@ -598,7 +597,26 @@
 }
 
 .original-overlay {
-  background: rgba(30, 40, 50, 0.55);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 30, 41, 0.74) 0%,
+    rgba(12, 30, 41, 0.62) 28%,
+    rgba(12, 30, 41, 0.3) 60%,
+    rgba(12, 30, 41, 0.08) 82%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 767px) {
+  .original-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(12, 30, 41, 0.72) 0%,
+      rgba(12, 30, 41, 0.6) 44%,
+      rgba(12, 30, 41, 0.32) 78%,
+      rgba(12, 30, 41, 0.16) 100%
+    );
+  }
 }
 
 .original-hero-copy h1 {
