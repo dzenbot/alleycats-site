@@ -34,6 +34,7 @@ const cleanUrlPages = new Set([
   "about.html",
   "cameras.html",
   "new-customer.html",
+  "check-in.html",
 ]);
 const requestedFile = window.location.pathname.split("/").pop();
 

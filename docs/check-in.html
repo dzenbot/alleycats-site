@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="js/analytics.js"></script>
+    <script src="js/theme.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Prepare for your cat's arrival at Alley Cats Hotel with this simple check-in checklist."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alley Cats Hotel" />
+    <meta property="og:title" content="Plan Your Check-In — Alley Cats Hotel" />
+    <meta
+      property="og:description"
+      content="A simple pre-arrival checklist to help make your cat's check-in smooth and efficient."
+    />
+    <meta
+      property="og:image"
+      content="https://alleycatshotel.com/img/og-preview.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Alley Cats Hotel in Pitt Meadows, BC"
+    />
+    <meta property="og:url" content="https://alleycatshotel.com/check-in" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Plan Your Check-In — Alley Cats Hotel"
+    />
+    <meta
+      name="twitter:description"
+      content="A simple pre-arrival checklist to help make your cat's check-in smooth and efficient."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alleycatshotel.com/img/og-preview.jpg"
+    />
+    <link rel="canonical" href="https://alleycatshotel.com/check-in" />
+    <link rel="icon" type="image/webp" sizes="120x120" href="img/favico.webp" />
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <title>Plan Your Check-In — Alley Cats Hotel</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://alleycatshotel.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Plan Your Check-In",
+            "item": "https://alleycatshotel.com/check-in"
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/check-in.css" />
+    <link rel="stylesheet" href="css/dark-mode.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/check-in.js" defer></script>
+  </head>
+  <body class="replica-page check-in-page">
+    <iframe
+      class="site-header-frame"
+      src="header.html"
+      title="Alley Cats Hotel navigation"
+    ></iframe>
+
+    <main class="check-in-main">
+      <section class="check-in-guide">
+        <header class="check-in-intro">
+          <p class="check-in-eyebrow">Before you arrive</p>
+          <h1 class="section-title section-title--ornament">
+            Plan Your Check-In
+          </h1>
+          <p>
+            A little preparation helps us welcome you and your cat smoothly.
+            Complete these steps before your arrival to make check-in quicker
+            and easier.
+          </p>
+        </header>
+
+        <div class="check-in-progress" aria-live="polite">
+          <div class="check-in-progress-copy">
+            <span data-check-in-count>0 of 5 ready</span>
+            <button type="button" data-check-in-reset hidden>
+              Clear checklist
+            </button>
+          </div>
+          <div
+            class="check-in-progress-track"
+            role="progressbar"
+            aria-label="Check-in preparation progress"
+            aria-valuemin="0"
+            aria-valuemax="5"
+            aria-valuenow="0"
+          >
+            <span data-check-in-progress></span>
+          </div>
+        </div>
+
+        <ol class="check-in-steps">
+          <li>
+            <label class="check-in-control" for="check-in-waiver">
+              <input
+                id="check-in-waiver"
+                type="checkbox"
+                data-check-in-item
+                aria-label="Mark online waiver signed"
+              />
+              <span class="check-in-box" aria-hidden="true"></span>
+              <span class="check-in-number">1</span>
+            </label>
+            <div class="check-in-step-copy">
+              <div class="check-in-step-heading">
+                <h2>Sign the online waiver</h2>
+                <span class="check-in-tag check-in-tag--required"
+                  >Required</span
+                >
+              </div>
+              <p>
+                You must sign the boarding waiver and power of attorney for
+                every new booking. Reviewing these documents at home before
+                arrival helps make check-in quicker and smoother for you and
+                your cat(s).
+              </p>
+              <a
+                class="check-in-action"
+                href="https://waiver.fr/p-Cr7pX"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sign Waiver</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <label class="check-in-control" for="check-in-vaccinations">
+              <input
+                id="check-in-vaccinations"
+                type="checkbox"
+                data-check-in-item
+                aria-label="Mark vaccination records submitted"
+              />
+              <span class="check-in-box" aria-hidden="true"></span>
+              <span class="check-in-number">2</span>
+            </label>
+            <div class="check-in-step-copy">
+              <div class="check-in-step-heading">
+                <h2>Submit vaccination records</h2>
+                <span class="check-in-tag check-in-tag--required"
+                  >Required</span
+                >
+              </div>
+              <p>
+                Make sure your cat's current vaccination records have been
+                uploaded, emailed or added to their online profile before
+                arrival. We require vaccinations against FVRCP, FeLV, and Rabies
+                for outdoor cats.
+              </p>
+              <p>
+                To learn more about our vaccination requirements, please visit
+                our <a href="guidelines.html">Guidelines section</a>.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <label class="check-in-control" for="check-in-food">
+              <input
+                id="check-in-food"
+                type="checkbox"
+                data-check-in-item
+                aria-label="Mark food and care instructions packed"
+              />
+              <span class="check-in-box" aria-hidden="true"></span>
+              <span class="check-in-number">3</span>
+            </label>
+            <div class="check-in-step-copy">
+              <div class="check-in-step-heading">
+                <h2>Pack food &amp; belongings</h2>
+                <span class="check-in-tag check-in-tag--required"
+                  >Required</span
+                >
+              </div>
+              <p>
+                Bring enough food for the entire stay, plus a little extra,
+                along with treats or familiar items your cat enjoys. Add feeding
+                and medication instructions to your online profile or bring them
+                clearly written on paper so our staff can add them to your cat's
+                file.
+              </p>
+              <p>
+                A familiar blanket or scented comfort item is welcome. Corded
+                feeders, fountains and cameras cannot be accepted.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <label class="check-in-control" for="check-in-app">
+              <input
+                id="check-in-app"
+                type="checkbox"
+                data-check-in-item
+                aria-label="Mark camera app installed"
+              />
+              <span class="check-in-box" aria-hidden="true"></span>
+              <span class="check-in-number">4</span>
+            </label>
+            <div class="check-in-step-copy">
+              <div class="check-in-step-heading">
+                <h2>Install the camera app</h2>
+              </div>
+              <p>
+                We recommend downloading the app before arrival. If the app was
+                previously configured on this device, delete the old
+                configuration or reinstall the app.
+              </p>
+              <p>
+                You will receive setup instructions during your arrival from our
+                staff.
+              </p>
+              <a
+                class="check-in-action"
+                href="hikconnect.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Install App</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <label class="check-in-control" for="check-in-final">
+              <input
+                id="check-in-final"
+                type="checkbox"
+                data-check-in-item
+                aria-label="Mark final arrival check complete"
+              />
+              <span class="check-in-box" aria-hidden="true"></span>
+              <span class="check-in-number">5</span>
+            </label>
+            <div class="check-in-step-copy">
+              <div class="check-in-step-heading">
+                <h2>Complete your final arrival check</h2>
+              </div>
+              <ul class="check-in-reminders">
+                <li>
+                  Every cat must arrive in a secure carrier, ideally with their
+                  claws trimmed.
+                </li>
+                <li>Arrive at your confirmed appointment time.</li>
+                <li>
+                  New to Alley Cats Hotel? 
+                  <a href="new-customer.html">Learn about the normal behaviours
+                  cats may show while adjusting to a new environment</a>.
+                </li>
+                <li>
+                  <a href="guidelines.html"
+                    >Review all guidelines and policies</a
+                  >.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="check-in-finish">
+          <p class="check-in-finish-title" data-check-in-finish>
+            You're almost ready.
+          </p>
+          <p>
+            Questions before arrival?
+            <a href="mailto:contact@alleycatshotel.com">Email us</a> and we'll
+            be happy to help.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <iframe
+      class="site-footer-frame"
+      src="footer.html"
+      title="Alley Cats Hotel contact information"
+    ></iframe>
+  </body>
+</html>

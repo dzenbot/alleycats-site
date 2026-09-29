@@ -41,8 +41,12 @@ html[data-theme="dark"] .site-header-frame {
 }
 
 @media (max-width: 1180px) {
-  .site-header-frame { height: 100px; }
-  .site-header-frame.is-menu-open { height: 100dvh; }
+  .site-header-frame {
+    height: 100px;
+  }
+  .site-header-frame.is-menu-open {
+    height: 100dvh;
+  }
 }
 
 .site-footer-frame {
@@ -917,7 +921,6 @@ details div {
   .original-header nav.open {
     display: flex;
   }
-
 }
 
 .replica-page {
@@ -1018,7 +1021,6 @@ details div {
     align-items: center;
     gap: 50px;
   }
-
 }
 
 .original-header,
@@ -1353,7 +1355,9 @@ p.hero-description {
 
 /* Consistent inline links in page copy. */
 :where(main p, main li)
-  a:not(.original-button):not(.original-outline):not(.about-text-link) {
+  a:not(.original-button):not(.original-outline):not(.about-text-link):not(
+    .check-in-action
+  ) {
   text-decoration: underline;
   text-decoration-color: currentColor;
   text-decoration-thickness: 1px;
@@ -1364,7 +1368,9 @@ p.hero-description {
 }
 
 :where(main p, main li)
-  a:not(.original-button):not(.original-outline):not(.about-text-link):hover {
+  a:not(.original-button):not(.original-outline):not(.about-text-link):not(
+    .check-in-action
+  ):hover {
   color: var(--gold);
   text-decoration-color: currentColor;
 }
