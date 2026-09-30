@@ -94,6 +94,12 @@ nav > a.is-current::after {
   transform: scaleX(1);
 }
 
+@media (hover: hover) {
+  nav:has(> a:not(.book-button):not(.is-current):hover) > a.is-current::after {
+    transform: scaleX(0);
+  }
+}
+
 .book-button {
   display: inline-block;
   padding: 12px 22px;
