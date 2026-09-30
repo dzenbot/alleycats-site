@@ -65,7 +65,7 @@
 .check-in-progress-copy button:hover {
   color: var(--navy);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
 
