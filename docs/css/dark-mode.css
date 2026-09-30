@@ -438,7 +438,9 @@ html[data-theme="dark"] .guidelines-intro-copy a {
 html[data-theme="dark"] .faq-answer a,
 html[data-theme="dark"] .guidelines-intro-copy a {
   color: #fff !important;
-  text-decoration: none !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 html[data-theme="dark"] .faq-answer a:hover,

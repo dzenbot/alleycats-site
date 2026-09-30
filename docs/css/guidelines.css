@@ -528,6 +528,9 @@
 .guidelines-intro-copy a,
 .faq-answer a {
   color: var(--navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .guidelines-search label,
