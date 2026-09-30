@@ -15,17 +15,23 @@ window.addEventListener("message", (event) => {
 
 const preventPageZoom = (event) => event.preventDefault();
 
-document.addEventListener("gesturestart", preventPageZoom, { passive: false });
-document.addEventListener("gesturechange", preventPageZoom, { passive: false });
-document.addEventListener("gestureend", preventPageZoom, { passive: false });
-document.addEventListener(
-  "touchmove",
-  (event) => {
-    if (event.touches.length > 1) event.preventDefault();
-  },
-  { passive: false },
-);
-document.addEventListener("dblclick", preventPageZoom, { passive: false });
+if (!document.body.classList.contains("cameras-page")) {
+  document.addEventListener("gesturestart", preventPageZoom, {
+    passive: false,
+  });
+  document.addEventListener("gesturechange", preventPageZoom, {
+    passive: false,
+  });
+  document.addEventListener("gestureend", preventPageZoom, { passive: false });
+  document.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches.length > 1) event.preventDefault();
+    },
+    { passive: false },
+  );
+  document.addEventListener("dblclick", preventPageZoom, { passive: false });
+}
 
 const cleanUrlPages = new Set([
   "index.html",

@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <script src="js/analytics.js"></script>
     <script src="js/theme.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/webp" sizes="120x120" href="img/favico.webp" />
@@ -36,39 +40,74 @@
         </h1>
         <p class="camera-intro">
           Watch your cat(s) from your iOS or Android devices.<br />To get
-          started, please follow the simple steps.
+          started, follow the simple steps.
         </p>
 
         <ol class="camera-steps">
           <li>
             <div class="camera-step-copy">
-              <h2>Select your room</h2>
-              <p>The camera credentials are unique to your room.</p>
+              <h2>Camera credentials</h2>
             </div>
             <div class="camera-room-picker">
+              <button
+                id="camera-credentials-expand"
+                class="camera-credentials-expand"
+                type="button"
+                aria-expanded="false"
+                aria-controls="camera-credentials"
+                hidden
+              >
+                <svg
+                  class="camera-expand-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M3 9V3h6M3 3l7 7M21 15v6h-6M21 21l-7-7" />
+                  <path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7" />
+                </svg>
+                <span class="camera-expand-label">Expand</span>
+                <span class="camera-expand-close" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
               <label for="camera-room"
-                >Choose your room number to reveal the credentials</label
+                >Choose your cat's room number to reveal the credentials:</label
               >
               <select id="camera-room" required>
-                <option value="">Select your room…</option>
+                <option value="">Select room #</option>
               </select>
               <div
-                id="camera-credentials"
-                class="camera-credentials"
-                aria-live="polite"
-              ></div>
+                id="camera-credentials-panel"
+                class="camera-credentials-panel"
+              >
+                <div
+                  id="camera-credentials"
+                  class="camera-credentials"
+                  aria-live="polite"
+                ></div>
+              </div>
             </div>
           </li>
           <li>
             <div class="camera-step-copy">
-              <h2>Install Hik-Connect</h2>
+              <h2>Install the Hik-Connect app</h2>
               <p>
-                <a href="hikconnect.html"
-                  >Tap here to install the free app Hik-Connect for iOS and
-                  Android</a
-                ><br />If the app was previously configured on this device,
-                delete the old configuration or reinstall the app before
-                continuing.
+                If the app was previously configured on this device, delete the
+                old configuration or update it with the credentials shown in
+                Step 1.
+              </p>
+              <a
+                class="camera-action"
+                href="hikconnect.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download App</a
+              >
+              <p class="camera-step-note">
+                Camera access is complimentary and intended for monitoring
+                only. The software is provided by a third party and may not be
+                compatible with every device.
               </p>
             </div>
           </li>
@@ -88,8 +127,9 @@
               <h2>Add your room camera</h2>
               <p>
                 Tap <strong>+</strong>, then choose
-                <strong>Manual Adding → IP/Domain</strong>. Enter the
-                credentials shown in Step 1 and tap <strong>Save</strong>.
+                <strong>Manual Adding / IP Domain</strong>.
+              </br>
+                Enter the credentials shown in Step 1 and tap <strong>Save</strong>.
               </p>
               <p class="camera-step-note">
                 Passwords are case-sensitive. We recommend copying and pasting

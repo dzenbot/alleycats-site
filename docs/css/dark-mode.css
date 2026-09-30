@@ -389,6 +389,29 @@ html[data-theme="dark"] .camera-credentials strong {
   color: #fff !important;
 }
 
+html[data-theme="dark"] .camera-credentials-expand {
+  border-color: #fff;
+  background: var(--deep);
+  color: #fff;
+}
+
+html[data-theme="dark"] .camera-credentials-expand:hover {
+  background: #fff;
+  color: var(--navy);
+}
+
+html[data-theme="dark"] .camera-credentials-panel.is-expanded {
+  background: var(--deep);
+}
+
+html[data-theme="dark"] body.credentials-expanded .camera-credentials-expand,
+html[data-theme="dark"]
+  body.credentials-expanded
+  .camera-credentials-expand:hover {
+  background: transparent;
+  color: #fff;
+}
+
 /* New customers */
 html[data-theme="dark"] .new-customer-main {
   background: var(--navy);
