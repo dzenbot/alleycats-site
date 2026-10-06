@@ -69,7 +69,7 @@ fetch("data/guidelines.json")
       button.setAttribute("aria-controls", `faq-answer-${index}`);
 
       const label = document.createElement("span");
-      label.textContent = item.question;
+      label.textContent = `${index + 1}. ${item.question}`;
       const chevron = document.createElement("span");
       chevron.className = "faq-chevron";
       chevron.setAttribute("aria-hidden", "true");

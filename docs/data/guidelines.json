@@ -91,7 +91,7 @@
     "question": "Do you offer any discounts?",
     "answer": [
       "We offer a 12% discount for long-term bookings of 30 days or more. This cannot be applied to a shorter booking that is later extended to 30 days or more.",
-      "We no longer offer an early departure discount."
+      "For bookings longer than 6 months, please email us for special discounts."
     ]
   },
   {
@@ -104,7 +104,8 @@
   {
     "question": "Why do you ask for tips/gratuities?",
     "answer": [
-      "Gratuities are suggested at checkout so guests can conveniently express their appreciation for the exceptional care and attention provided by our staff."
+      "Gratuities are optional and suggested at checkout as a convenient way to show appreciation for the exceptional care and attention provided by our staff.",
+      "100% of gratuities go directly to our staff. Gratuities can be paid by card or cash."
     ]
   },
   {
