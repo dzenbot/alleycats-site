@@ -83,7 +83,7 @@
     "question": "How do the cameras work?",
     "answer": [
       "Each room has an HD camera with night vision and no audio. You can monitor your cat from an iOS or Android device with a reliable internet connection.",
-      "You will receive setup instructions at check-in. We recommend downloading the app before arrival from https://alleycatshotel.com/hikconnect.",
+      "You will receive setup instructions at check-in. We recommend downloading the app before arrival from https://alleycatshotel.com/hikconnect (open from your mobile device).",
       "Camera access is complimentary and intended for monitoring only. The software is provided by a third party and may not be compatible with every device."
     ]
   },
@@ -97,7 +97,8 @@
   {
     "question": "What forms of payment do you accept?",
     "answer": [
-      "We accept credit cards, Apple Pay, Google Pay, debit and e-transfer. Interac e-transfers can be sent to contact@alleycatshotel.com with no password required.",
+      "We accept credit cards, Apple Pay, Google Pay, debit and e-transfer.",
+      "Interac e-transfers can be sent to contact@alleycatshotel.com with no password required.",
       "We do not accept cash or cheques except for gratuities. Gratuities are suggested at checkout and 100% goes to our staff."
     ]
   },
@@ -112,7 +113,7 @@
     "question": "What are your Privacy Policies?",
     "answer": [
       "We take your privacy seriously and maintain strict confidentiality standards. Your contact information is safe and will not be shared or sold to third parties.",
-      "To process reservations we require your name, address, phone number and email, along with your cat’s information and medical history. All information is kept confidential and secure."
+      "To process reservations we require your full name, address, phone numbers and email, along with your cat’s information and medical history. All information is kept confidential and secure in our online platform."
     ]
   }
 ]
